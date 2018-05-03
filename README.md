@@ -31,12 +31,15 @@ A translation is correct if we can get the same answer from the GEOQUERY databas
 reference query.
 Here in the evaluation module in WASP, it uses a Prolog development system SICStus to retrieve
 the answer from GEOQUERY database.
-Hireo:
-Got 126 correct translations of 280 test sentences
-Precision 45%   
+
+Hireo:    
+Got 126 correct translations of 280 test sentences    
+Precision **45%**  
 Phrase-based in Moses:    
 Got 33 correct translations of 280 test sentences   
 Precision 11.8%   
 thrax-phrase:   
 Got 41 correct translations of 280 test sentences   
 Precision 14.6%   
+
+See the [report](./project-report2.pdf) for more detail.

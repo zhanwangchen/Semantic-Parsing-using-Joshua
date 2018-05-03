@@ -44,4 +44,4 @@ Precision 14.6%
 
 See the [report](./project-report2.pdf) for more detail.
 
-Hireo results see [this pdf](./sentence-by-Sentence Comparison.pdf)
+Hireo results see [this pdf](./sentence-by-Sentence_Comparison.pdf)

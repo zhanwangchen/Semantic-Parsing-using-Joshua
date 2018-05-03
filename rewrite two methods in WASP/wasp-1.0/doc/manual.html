@@ -1,0 +1,952 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+	<head>
+		<title>WASP User's Manual</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	</head>
+	<body>
+		<h1>WASP User's Manual</h1>
+
+		<p><b>For the WASP Semantic Parser, Version 1.0</b></p>
+
+		<p>
+			Yuk Wah Wong
+			(<a href="mailto:ywwong@cs.utexas.edu">ywwong@cs.utexas.edu</a>), The
+			University of Texas at Austin, August 2006.
+		</p>
+		
+		<hr>
+
+		<ul>
+			<li><a href="#sec1">1. What is WASP?</a></li>
+			<li><a href="#sec2">2. What is in this Distribution?</a></li>
+			<li>
+				<a href="#sec3">3. How to Use WASP?</a>
+				<ul>
+					<li><a href="#sec3.1">3.1 Training the Semantic Parser</a></li>
+					<li><a href="#sec3.2">3.2 Using the Semantic Parser</a></li>
+					<li><a href="#sec3.3">3.3 Evaluating the Semantic Parser</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#sec4">4. How to Create New Application Domains?</a>
+				<ul>
+					<li><a href="#sec4.1">4.1. Creating an MRL Grammar File</a></li>
+					<li><a href="#sec4.2">4.2. Creating a Corpus</a></li>
+					<li><a href="#sec4.3">4.3. Creating an MRL-Specific Tokenizer</a></li>
+					<li><a href="#sec4.4">4.4. Defining the Notion of MR Correctness</a></li>
+					<li><a href="#sec4.5">4.5. Creating Initial SCFG Rules</a></li>
+					<li><a href="#sec4.6">4.6. Putting the Pieces Together</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#sec5">5. Other Topics</a>
+				<ul>
+					<li><a href="#sec5.1">5.1. Fully-Supervised WASP</a></li>
+				</ul>
+			</li>
+		</ul>
+
+		<hr>
+
+		<a name="sec1">
+		<h2>1. What is WASP?</h2>
+
+		<p>
+			WASP is a statistical learning algorithm for semantic parsing.  Semantic
+			parsing is the construction of complete, formal meaning representations
+			given input sentences.  A semantic parser is learned given a set of
+			sentences annotated with their correct meaning representations.
+		</p>
+
+		<p>
+			Here is a sample meaning representation (MR) written in a 
+			meaning-representation language (MRL) called CLang, which is used for
+			encoding coach advice given to simulated soccer-playing agents in the
+			RoboCup domain:
+		</p>
+
+		<blockquote>
+			<p>
+				<tt>((bowner our {4}) (do our {6} (pos (left (half our)))))</tt>
+			</p>
+			<p>
+				<i>If our player 4 has the ball, then our player 6 should stay in the
+				left side of our half.</i>
+			</p>
+		</blockquote>
+
+		<p>
+			The CLang predicate <tt>bowner</tt> means <i>ball owner</i>,
+			<tt>our</tt> means <i>our team</i>, <tt>4</tt> means <i>the uniform 
+			number 4</i>, and so on.  Details about CLang can be found in the 
+			<a href="http://sourceforge.net/projects/sserver/" target="_new">RoboCup
+			Server Manual</a>.  (Details about the additional predicates that we
+			added to the CLang language, such as <tt>left</tt> and <tt>half</tt>, 
+			can be found in <a href="robocup-clang.html">this page</a>.)  Given the
+			above sample sentence, a semantic parser would construct the above MR in
+			CLang.
+		</p>
+		
+		<!--
+		<p>
+			Here is another sample meaning representation written in a functional
+			query language.  This MRL is used in the Geoquery domain:
+		</p>
+
+		<blockquote>
+			<p>
+				<tt>answer(count(city(loc_2(countryid(usa)))))</tt>
+			</p>
+			<p>
+				<i>How many cities are there in the US?</i>
+			</p>
+		</blockquote>
+		
+		<p>
+			Given the above natural-language query, a semantic parser would construct
+			the corresponding query in the functional query language, which is used
+			to retrieve answers from a U.S. geography database.
+		</p>
+		-->
+
+		<p>
+			WASP is a statistical approach to semantic parsing based on machine
+			translation techniques.  More specifically, a statistical word alignment
+			model is used to acquire a bilingual lexicon consisting of NL substrings
+			coupled with their translations in the traget MRL.  Complete MRs are then
+			formed by combining these NL substrings and their translations under the
+			synchronous parsing framework, which has been widely used in syntax-based
+			machine translation (Wu, 1997; Yamada &amp; Knight, 2001; Melamed, 2004;
+			Chiang, 2005).  The WASP algorithm is described in the following paper:
+		</p>
+
+		<blockquote>
+			<p>
+				Yuk Wah Wong and Raymond J. Mooney.  
+				<a href="http://www.cs.utexas.edu/~ml/publication/paper.cgi?paper=wasp-naacl-06.ps.gz" target="_new">
+				Learning for Semantic Parsing with Statistical Machine Translation</a>.
+				In <i>Proceedings of the 2006 Human Language Technology Conference -
+				North American Chapter of the Association for Computational Linguistics
+				Annual Meeting (HLT/NAACL-2006)</i>, pp. 439-446, New York City, NY,
+				June 2006.
+			</p>
+		</blockquote>
+
+		<a name="sec2">
+		<h2>2. What is in this Distribution?</h2>
+		
+		<p>
+			This distribution contains:
+		</p>
+
+		<ul>
+			<li>
+				The code for training the semantic parser from training data;
+			</li>
+			<li>
+				The code for running the learned semantic parser;
+			</li>
+			<li>
+				The code for evaluating the learned semantic parser;
+			</li>
+			<li>
+				Corpora in two application domains: RoboCup and Geoquery, complete with
+				sample configuration files and domain-specific code so that you can
+				train and run the semantic parser right away!  (These corpora were
+				used in Kate et al. (2005) and Wong &amp; Mooney (2006).)
+			</li>
+		</ul>
+
+		<p>
+			All code is written in Java.  To compile the code, you need JDK 1.4 or
+			higher.  In addition, training of word alignment models requires the
+			GIZA++ package, which is available in
+			<a href="http://www.fjoch.com/GIZA++.html" target="_new">Franz Josef
+			Och's website</a>.  To evaluate formal queries in the Geoquery domain,
+			you also need a copy of <a href="http://www.sics.se/sicstus/"
+			target="_new">SICStus Prolog</a>.  The evaluation scripts have been
+			tested on SICStus Prolog version 3.11.2.
+		</p>
+		
+		<a name="sec3">
+		<h2>3. How to Use WASP?</h2>
+
+		<p>
+			First, you have to compile the Java code.  All Java code is in the
+			<tt>src</tt> directory.  To compile the code, do the following:
+		</p>
+
+		<blockquote>
+			<p>
+				<tt>cd src</tt><br>
+				<tt>find . -name '*.java' | xargs javac -O</tt>
+			</p>
+		</blockquote>
+
+		<p>
+			All programs are in the <tt>wasp.main</tt> and <tt>wasp.main.eval</tt>
+			packages:
+		</p>
+		
+		<ul>
+			<li>
+				<tt><b>wasp.main.Trainer</b></tt> - the program that trains the 
+				semantic parser from training data;
+			</li>
+			<li>
+				<tt><b>wasp.main.Parser</b></tt> - the program that does semantic
+				parsing based on previously-learned parsing models;
+			</li>
+			<li>
+				<tt><b>wasp.main.eval.ParserEvaluator</b></tt> - the program that
+				evaluates the semantic parser by reading its output MRs and comparing
+				them against the gold-standard MRs.  This program also generates
+				statistics using various evaluation metrics.
+			</li>
+		</ul>
+
+		<p>
+			The following sections will quickly walk you through the training,
+			testing and evaluation stages.
+		</p>
+
+		<a name="sec3.1">
+		<h3>3.1. Training the Semantic Parser</h3>
+
+		<p>
+			The program that trains the semantic parser requires the following
+			command-line arguments to run:
+		</p>
+		
+		<blockquote>
+			<p>
+				<tt><b>java wasp.main.Trainer</b> <u>config-file</u> <u>model-dir</u>
+				<u>mask-file</u></tt>
+			</p>
+		</blockquote>
+
+		<ul>
+			<li>
+				<tt><u>config-file</u></tt> - the configuration file that contains the
+				current settings for the trainer;
+			</li>
+			<li>
+				<tt><u>model-dir</u></tt> - the directory for storing the learned
+				semantic parsing model;
+			</li>
+			<li>
+				<tt><u>mask-file</u></tt> - the example mask that specifies the
+				training set.
+			</li>
+		</ul>
+
+		<p>
+			For your convenience, we included two sample configuration files in this
+			distribution, namely <tt>data/robocup-clang/config</tt> (for the RoboCup
+			domain) and <tt>data/geo-funql/config</tt> (for the Geoquery domain). 
+			Let us take a look at the configuration file for RoboCup:
+		</p>
+
+		<blockquote>
+			<p><tt>
+				<b>wasp.nl</b>=en<br>
+				<b>wasp.mrl</b>=robocup-clang<br>
+				<b>wasp.mrl.grammar</b>=/usr/share/wasp/data/robocup-clang/mrl-grammar<br>
+				<b>wasp.corpus.file</b>=/usr/share/wasp/data/robocup-clang/corpus.xml<br>
+				<b>wasp.align.model</b>=giza++<br>
+				<b>wasp.align.giza++.exec</b>=/usr/local/bin/GIZA++<br>
+				<b>wasp.translation.model</b>=scfg<br>
+				<b>wasp.scfg.init</b>=/usr/share/wasp/data/robocup-clang/scfg-init-rules<br>
+			</tt></p>
+		</blockquote>
+
+		<p>
+			The configuration file is a Java property list, where each line is a
+			key-value pair.  The most important settings are at the top:
+		</p>
+
+		<ul>
+			<li>
+				<tt><b>wasp.nl</b></tt> - the current natural language (<tt>en</tt> is
+				the XML language tag for English).  It is necessary to specify the
+				natural language because a corpus can be multilingual.  For example,
+				the Geoquery corpus has English, Japanese, Spanish and Turkish.
+			</li>
+			<li>
+				<tt><b>wasp.mrl</b></tt> - the current meaning-representation language
+				(<tt>robocup-clang</tt> is for the CLang language in the RoboCup
+				domain).  This setting also defines the current application domain.
+			</li>
+			<a name="text-footnote1">
+			<li>
+				<tt><b>wasp.mrl.grammar</b></tt> - the absolute pathname of the current
+				MRL grammar file.  In WASP, every MRL must have an unambiguous
+				context-free grammar.<a href="#footnote1"><sup>1</sup></a>  The <b>MRL
+				grammar file</b> lists all production rules of this grammar.
+			</li>
+			<li>
+				<tt><b>wasp.corpus.file</b></tt> - the absolute pathname of the current
+				corpus.  A corpus is a set of examples that are stored in an XML file.
+			</li>
+		</ul>
+
+		<p>
+			The rest of the settings specify the types of word alignment model and
+			translation model to use.  Some of the settings are model-specific.  For
+			example, if the current word alignment model is GIZA++ (<tt>giza++</tt>),
+			then you have to specify the absolute pathname of the GIZA++ executable
+			file (<tt><b>wasp.align.giza++.exec</b></tt>).
+		</p>
+
+		<a name="text-footnote2">
+		<p>
+			Apart from the configuration file, you also need to specify the training
+			set (using the command-line argument
+			<tt><u>mask-file</u></tt><a href="#footnote2"><sup>2</sup></a>).  For
+			this, you need an example mask.  An <b>example mask</b> is a text file
+			that contains a list of example IDs (one ID per line).  All examples in
+			a corpus have an example ID.  For your convenience, we included a set of
+			example masks for each application domain, namely
+			<tt>data/robocup-clang/split-*</tt> and <tt>data/geo-funql/split-*</tt>.
+			These masks can be used to generate learning curves using 10x10-fold
+			cross validation.  (The 10-fold cross validation experiments in Kate et
+			al. (2005) and Wong &amp; Mooney (2006) are based on the data splits in
+			<tt>data/robocup-clang/split-*/run-0</tt> and
+			<tt>data/geo-funql/split-*/run-0</tt>.)
+		</p>
+
+		<p>
+			The <tt><b>Trainer</b></tt> program writes the learned translation model
+			to the output directory (the command-line argument
+			<tt><u>model-dir</u></tt>).  It also writes a message log to the standard
+			error stream, which can be captured for detailed error analysis.
+		</p>
+
+		<a name="sec3.2">
+		<h3>3.2. Using the Semantic Parser</h3>
+
+		<p>
+			The program that does semantic parsing based on previously-learned
+			translation models accepts similar command-line arguments as the trainer
+			does:
+		</p>
+
+		<blockquote>
+			<p>
+				<tt><b>java wasp.main.Parser</b> <u>config-file</u> <u>model-dir</u>
+				<u>mask-file</u> <u>output-file</u></tt>
+			</p>
+		</blockquote>
+
+		<ul>
+			<li>
+				<tt><u>config-file</u></tt> - the configuration file that contains the
+				current settings for the parser;
+			</li>
+			<li>
+				<tt><u>model-dir</u></tt> - the directory where the learned semantic
+				parsing model is stored (this corresponds to the output directory of
+				the trainer);
+			</li>
+			<li>
+				<tt><u>mask-file</u></tt> - the example mask that specifies the test
+				set;
+			</li>
+			<li>
+				<tt><u>output-file</u></tt> - the output XML file for storing the
+				automatically-generated parses.
+			</li>
+		</ul>
+
+		<p>
+			The configuration file is the same as before.  However, there is a
+			parser-specific setting that you need to specify:
+		</p>
+
+		<blockquote>
+			<p><tt>
+				<b>wasp.kbest</b>=1
+			</tt></p>
+		</blockquote>
+
+		<p>
+			This specifies the maximum number of top-scoring parses to return.  Set
+			this to <tt>1</tt> for Viterbi decoding.  This setting is ignored by
+			the trainer and the parser evaluator.
+		</p>
+
+		<p>
+			The output XML file follows roughly the same format as the corpus file.
+			Instead of gold-standard MRs, it contains the top-scoring translations
+			given by the parser.  Some examples may not have any translations at all.
+			Like the trainer, the <tt><b>Parser</b></tt> program writes a message log
+			to the standard error stream.
+		</p>
+
+		<a name="sec3.3">
+		<h3>3.3. Evaluating the Semantic Parser</h3>
+
+		<p>
+			The <tt><b>ParserEvaluator</b></tt> program reads the output of the
+			parser, compares the top-scoring parse of each example against the
+			gold-standard MR, and generates statistics using various evaluation
+			metrics:
+		</p>
+
+		<blockquote>
+			<p>
+				<tt><b>java wasp.main.eval.ParserEvaluator</b> <u>config-file</u>
+				<u>output-file</u> <u>input-file-1</u> <u>input-file-2</u> ...</tt>
+			</p>
+		</blockquote>
+
+		<ul>
+			<li>
+				<tt><u>config-file</u></tt> - the configuration file that contains the
+				current settings for the parser evaluator;
+			</li>
+			<li>
+				<tt><u>output-file</u></tt> - the output file for storing the
+				evaluation results;
+			</li>
+			<li>
+				<tt><u>input-file-<i>n</i></u></tt> - the input XML files that contain
+				parses generated by the parser.
+			</li>
+		</ul>
+
+		<p>
+			The configuration file is the same as before.  The input XML files are
+			the output of the <tt><b>Parser</b></tt> program.  If there are more than
+			one input files, then each one should be produced by a separately-trained
+			semantic parser.  For example, there would be one input file for each
+			fold in the 10-fold cross validation setting.  Macro-averaging is used
+			to obtain average statistics across all folds.
+		</p>
+
+		<p>
+			The parser evaluator generates the following statistics:
+		</p>
+
+		<ul>
+			<li>
+				Precision - the percentage of translations that are correct;
+			</li>
+			<li>
+				Recall - the percentage of test sentences that are correctly
+				translated;
+			</li>
+			<li>
+				F-measure - the harmonic mean of precision and recall.
+			</li>
+		</ul>
+
+		<p>
+			The definition of correctness is domain-specific.  For example, in the
+			RoboCup domain, an MR translation is correct if it exactly matches the
+			gold-standard MR, up to permutation of arguments of certain predicates
+			(e.g. <tt>and</tt> and <tt>or</tt>).
+		</p>
+
+		<p>
+			The output of the parser evaluator is a plain text file with the
+			following format: It starts with the main section where the gold-standard
+			MRs and the automatically-generated parses are listed.  Incorrect parses
+			are preceded by asterisks (<tt>*</tt>).  After the main section are the
+			statistics.  There is a section for each evaluation metric.  Here is a
+			sample section for the precision metric:
+		</p>
+
+		<blockquote>
+			<p><tt>
+				begin precision<br>
+				mean 0.8636014401946894<br>
+				95%-confidence-interval 0.8173097234842457 0.9098931569051332<br>
+				end precision
+			</tt></p>
+		</blockquote>
+
+		<p>
+			Obviously, the first line begins the section for precision, and the last
+			line ends it.  The second line is the mean precision across all input
+			files.  The third line is the range of values within which the mean
+			precision may lie with 95% confidence.  The sections for recall and
+			F-measure follow the same format.
+		</p>
+
+		<p>
+			There is also a separate section for the precision-recall (PR) curve.  A
+			PR curve is obtained by varying the score threshold.  In a PR curve, the
+			<i>x</i> axis is the recall level, and the <i>y</i> axis is the mean
+			precision.  A PR curve is represented as a list of (<i>x</i>, <i>y</i>)
+			pairs.
+		</p>
+			
+		<a name="sec4">
+		<h2>4. How to Create New Application Domains?</h2>
+
+		<p>
+			Why stick with the sample data sets that are given to you?  Create your
+			own data set in a new application domain!  This section explains
+			everything about extending WASP to your exciting new application.
+		</p>
+
+		<p>
+			Here are the things you need to do to create a new application domain:
+		</p>
+
+		<ol>
+			<li>
+				Find an unambiguous context-free grammar of the target MRL.  Write it
+				down in an MRL grammar file.
+			</li>
+			<li>
+				Create a corpus.
+			</li>
+			<li>
+				Create a string tokenizer specific to the target MRL.
+			</li>
+			<li>
+				Define what it means for an MR to be correct in this domain.
+			</li>
+			<li>
+				Create a set of initial SCFG rules, if necessary.
+			</li>
+			<li>
+				Write a bit of code to link the pieces together.
+			</li>
+		</ol>
+
+		<p>
+			We will cover these tasks in the following subsections.
+		</p>
+
+		<a name="sec4.1">
+		<h3>4.1. Creating an MRL Grammar File</h3>
+
+		<p>
+			Recall that WASP requires the target MRL to have an unambiguous
+			context-free grammar, and the MRL grammar file is a text file that
+			contains all production rules of this grammar.  Each line of this file
+			represents a production rule.  Here is a sample production rule:
+		</p>
+
+		<blockquote>
+			<p>
+				<tt>*n:Action -&gt; ({ ( pos *n:Region ) })</tt>
+			</p>
+		</blockquote>
+
+		<p>
+			The token before the arrow (<tt>-&gt;</tt>) is the LHS nonterminal.
+			Everything between the <tt>({</tt> and <tt>})</tt> tokens are the RHS
+			string of terminals and nonterminals.  Tokens with the prefix
+			<tt>*n:</tt> are nonterminals.  So both <tt>*n:Action</tt> and
+			<tt>*n:Region</tt> are nonterminals.  On the other hand, <tt>(</tt>,
+			<tt>pos</tt> and <tt>)</tt> are terminal symbols.  All symbols must be
+			separated by whitespace.  Also there must be space between the LHS
+			nonterminal and the arrow, and so on.
+		</p>
+
+		<p>
+			Following the production rule, there can be a list of modifiers.  One
+			such modifier is <tt>zero-fertility</tt>.  Production rules modified by
+			<tt>zero-fertility</tt> will be forced to have zero fertility in the
+			output word alignments.  You can create your own modifiers.  See
+			<a href="#sec4.6">Section 4.6</a>.
+		</p>
+
+		<p>
+			There are also a special class of terminal symbols called wildcard
+			symbols.  A <b>wildcard symbol</b> is a disjunction of terminal symbols.
+			For example, the wildcard symbol <tt>*t:Num</tt> is the disjunction of
+			terminal symbols that represent real numbers.  The following production:
+		</p>
+
+		<blockquote>
+			<p>
+				<tt>*n:Num -&gt; ({ *t:Num })</tt>
+			</p>
+		</blockquote>
+
+		<p>
+			is equivalent to the following set of productions, which obviously can be
+			a very large set:
+		</p>
+
+		<blockquote>
+			<p><tt>
+				*n:Num -&gt; ({ 0 })<br>
+				*n:Num -&gt; ({ 0.1 })<br>
+				*n:Num -&gt; ({ 0.01 })<br>
+				...
+			</tt></p>
+		</blockquote>
+	
+		<p>
+			For simplicity, whenever a wildcard symbol is used, it must be the only
+			symbol in the RHS.
+		</p>
+
+		<p>
+			Currently, three wildcard symbols are defined: <tt>*t:Num</tt> (for real
+			numbers), <tt>*t:Unum</tt> (for uniform numbers) and <tt>*t:Ident</tt>
+			(for CLang identifiers).  The last two are specific to the RoboCup
+			domain.  To define your own wildcard symbols, modify the following
+			classes: <tt>wasp.data.Dictionary</tt> and <tt>wasp.data.Terminal</tt>.
+			See the Javadoc for more information.
+		</p>
+		
+		<a name="sec4.2">
+		<h3>4.2. Creating a Corpus</h3>
+
+		<p>
+			The corpus is stored in an XML file.  Note that the file must be valid
+			XML!  A minimal corpus file should look like this:
+		</p>
+
+		<blockquote>
+			<p><tt>
+				&lt;?xml version="1.0"?&gt;<br>
+				&lt;examples&gt;<br>
+				&lt;example id="0"&gt;<br>
+				&lt;nl lang="en"&gt;<br>
+				...<br>
+				&lt;/nl&gt;<br>
+				&lt;mrl lang="robocup-clang"&gt;<br>
+				...<br>
+				&lt;/mrl&gt;<br>
+				&lt;/example&gt;<br>
+				...<br>
+				&lt;/examples&gt;
+			</tt></p>
+		</blockquote>
+
+		<p>
+			All examples have a unique ID which is a non-negative integer.  Every
+			sentence has a language tag (e.g. <tt>en</tt>).  There is a language tag
+			for every MR as well (e.g. <tt>robocup-clang</tt>).  These tags
+			correspond to those specified in the configuration file
+			(<tt><b>wasp.nl</b></tt> and <tt><b>wasp.mrl</b></tt>, respectively).
+		</p>
+
+		<p>
+			The corpora for RoboCup and Geoquery are a lot more verbose.  But the
+			tags shown above are the only essential ones.  (See
+			<a href="#sec5.1">Section 5.1</a> for information about other tags.)
+		</p>
+
+		<a name="sec4.3">
+		<h3>4.3. Creating an MRL-Specific Tokenizer</h3>
+
+		<p>
+			Every MRL has its own string tokenizer.  You provide one by extending
+			the class <tt>wasp.mrl.MRLGrammar</tt>:
+		</p>
+
+		<blockquote>
+			<p><tt>
+				public class MyMRLGrammar extends MRLGrammar {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;public Symbol[] <b>tokenize</b>(String str) {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;public String <b>combine</b>(Symbol[] syms) {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+				}
+			</tt></p>
+		</blockquote>
+
+		<p>
+			The <tt><b>tokenize</b></tt> method tokenizes an MRL string.  This method
+			returns an array of symbols.  Symbols are created using the
+			<tt>read(String token)</tt> method of the class
+			<tt>wasp.data.Symbol</tt>.  The <tt><b>combine</b></tt> method is simply
+			the inverse of <tt><b>tokenize</b></tt>.
+		</p>
+
+		<p>
+			The classes <tt>wasp.domain.RoboCupCLangGrammar</tt> and
+			<tt>wasp.domain.GeoFunqlGrammar</tt> implement the RoboCup and Geoquery
+			tokenizers.
+		</p>
+
+		<a name="sec4.4">
+		<h3>4.4. Defining the Notion of MR Correctness</h3>
+
+		<p>
+			The definition of MR correctness is domain-specific.  For example, in the
+			RoboCup domain, an MR is correct if it exactly matches the gold-standard
+			MR.  In the Geoquery domain, a query is correct if it retrieves the same
+			answer from the U.S. geography database as the gold-standard query does.
+		</p>
+
+		<p>
+			Again, you define the notion of MR correctness in your domain by
+			extending the class <tt>wasp.mrl.MRLGrammar</tt>:
+		</p>
+
+		<blockquote>
+			<p><tt>
+				public class MyMRLGrammar extends MRLGrammar {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;public boolean[][] <b>evaluate</b>(Examples examples, Examples gold) {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+				}
+			</tt></p>
+		</blockquote>
+
+		<p>
+			The <tt><b>evaluate</b></tt> method takes two sets of examples, one
+			having the MR translations to evaluate (<tt>examples</tt>), one having
+			the gold-standard MRs (<tt>gold</tt>), and returns a list of Boolean
+			arrays such that the <i>i</i>-th element of the <i>j</i>-th array is true
+			if and only if the <i>i</i>-th top-scoring parse of the <i>j</i>-th
+			example in <tt>examples</tt> is correct.  This method allows for batch
+			processing of MRs.  It is useful because processing each MR individually
+			can be very inefficient (e.g. in the Geoquery domain).
+		</p>
+
+		<a name="sec4.5">
+		<h3>4.5. Creating Initial SCFG Rules</h3>
+
+		<p>
+			Currently, the only translation model supported is based on synchronous
+			context-free grammars (SCFG).  Here is a sample SCFG rule:
+		</p>
+
+		<blockquote>
+			<p>
+				<tt>*n:Directive -&gt; ({ position *n:Player#1 *n:Region#2 })({ ( do *n:Player#1 ( pos *n:Region#2 ) ) })</tt>
+			</p>
+		</blockquote>
+
+		<p>
+			The token before the arrow (<tt>-&gt;</tt>) is the LHS nonterminal.
+			Between the <tt>({</tt> and <tt>})({</tt> tokens is the NL portion of the
+			RHS string.  Between the <tt>})({</tt> and <tt>})</tt> tokens is the MRL
+			portion of the RHS string.  All nonterminals on the RHS are indexed, as
+			indicated by the non-negative integers following the pound signs
+			(<tt>#</tt>).  For every nonterminal in the NL portion of the RHS string,
+			there is exactly one identical nonterminal in the MRL portion that has
+			the same index.  The same is true for wildcard symbols.
+		</p>
+
+		<p>
+			Given an MRL grammar, a set of initial rules are always created and added
+			to the learned SCFG:
+		</p>
+
+		<ul>
+			<li>
+				Given a unary MRL production <tt>*n:X -&gt; ({ *n:Y })</tt>, the unary
+				rule <tt>*n:X -&gt; ({ *n:Y#1 })({ *n:Y#1 })</tt> is always added to
+				the SCFG.
+			</li>
+			<li>
+				Given a MRL production <tt>*n:X -&gt; ({ *t:Y })</tt>, where 
+				<tt>*t:Y</tt> is a wildcard symbol, the rule <tt>*n:X -&gt;
+				({ *t:Y#1 })({ *t:Y#1 })</tt> is always added to the SCFG.
+			</li>
+		</ul>
+
+		<p>
+			It is sometimes useful to provide additional initial rules that are
+			always included in the learned SCFG.  For example, initial rules can be
+			used to represent a dictionary of foreign terms that refer to
+			domain-specific entities:
+		</p>
+
+		<blockquote>
+			<p><tt>
+				*n:CityName -&gt; ({ ausuchin })({ ' austin ' })<br>
+				*n:CityName -&gt; ({ nyuu yooku })({ ' new york ' })<br>
+				...
+			</tt></p>
+		</blockquote>
+
+		<p>
+			Additional initial rules are stored in a text file.  Each line of this
+			file represents an SCFG rule.  This file is used by the trainer, and it
+			only accepts rules whose RHS symbols are all terminals, with no word gaps
+			on the NL side.  The absolute pathname of the text file is specified in
+			the configuration file via the key <tt><b>wasp.scfg.init</b></tt>.
+		</p>
+		
+		<p>
+			Following an SCFG rule, there can be a list of modifiers.  One such
+			modifier is <tt>tied-to <u>rule</u></tt>, where <tt><u>rule</u></tt> is
+			the representation of another rule with the same LHS nonterminal.  It is
+			said that the two rules have their parameters tied.  This can be used for
+			more robust parameter estimation.
+		</p>
+
+		<a name="sec4.6">
+		<h3>4.6. Putting the Pieces Together</h3>
+
+		<p>
+			There are a few more methods of the class <tt>MRLGrammar</tt> that you
+			have to implement:
+		</p>
+
+		<blockquote>
+			<p><tt>
+				public class MyMRLGrammar extends MRLGrammar {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;public int <b>getStart</b>() {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;public int <b>countNonterms</b>() {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;protected void <b>readModifiers</b>(Production prod, String[] line, Int index) {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+				}
+			</tt></p>
+		</blockquote>
+
+		<p>
+			The <tt><b>getStart</b></tt> method returns the integer ID of the start
+			symbol of the MRL grammar.  You can get the integer ID using the method
+			<tt>Dictionary.nonterm(String str)</tt>.  The
+			<tt><b>countNonterms</b></tt> method returns the number of possible
+			nonterminals in this grammar.  The <tt><b>readModifiers</b></tt> method
+			allows you to define your own MRL production modifiers (see the Javadoc
+			for more information).  If you do not want to define any modifiers, you
+			can leave this method empty.
+		</p>
+
+		<p>
+			After defining your own subclass of <tt>MRLGrammar</tt>, you have to link
+			it to a new language tag.  Language tags are defined in the
+			<tt>MRLGrammar.createNew()</tt> method.  You should use the same tag in
+			your corpus and your configuration file.  Your configuration file should
+			also point to the MRL grammar file, the corpus, and the initial SCFG
+			rules that you have created.  Once you have done that, you are all set!
+		</p>
+		
+		<a name="sec5">
+		<h2>5. Other Topics</h2>
+
+		<a name="sec5.1">
+		<h3>5.1. Fully-Supervised WASP</h3>
+
+		<p>
+			Instead of relying on GIZA++, the trainer can extract SCFG rules from
+			gold-standard word alignments.  Gold-standard word alignments are
+			generally less noisy, and the resulting semantic parser is often much
+			more precise, although word alignments are more time-consuming to
+			annotate than plain MRs.
+		</p>
+
+		<p>
+			The RoboCup and Geoquery corpora included in this distribution come with
+			gold-standard word alignments.  These alignments are derived from
+			previous annotations by Ge &amp; Mooney (2005).
+		</p>
+
+		<p>
+			The gold-standard word alignments can be found inside the <tt>augsyn</tt>
+			tags in the corpus XML files.  The tags are called <tt>augsyn</tt>
+			because the annotations are originally semantically-augmented parse
+			trees (Ge &amp; Mooney, 2005).  For clarity, the annotations that we
+			provide are degenerate parse trees that are only one level deep. (Full
+			syntactic parses can be found inside the <tt>syn</tt> tags.)
+		</p>
+
+		<p>
+			Consistent with the use of MRL productions in WASP, semantic labels in
+			our corpora are pointers to nodes in the gold-standard MR parse trees:
+		</p>
+
+		<blockquote>
+			<p>
+				<tt>If-[Rule:1] the ball-[Condition:2] is-[Condition:2]
+				in-[Condition:2] our-[Team:4] half-[Region:3] ...</tt>
+			</p>
+		</blockquote>
+
+		<a name="text-footnote3">
+		<p>
+			Inside the square brackets (<tt>[</tt> and <tt>]</tt>) are the semantic
+			labels.  The number after each colon (<tt>:</tt>) is a node ID.  It
+			refers to the node with the same ID in the gold-standard MR parse 
+			tree.<a href="#footnote3"><sup>3</sup></a>  The parse trees are made
+			available inside the <tt>mrl-parse</tt> tags, where nodes are listed in
+			the top-down, leftmost order:
+		</p>
+
+		<blockquote>
+			<p><tt>
+				&lt;mrl-parse&gt;<br>
+				&lt;node id="0"&gt; *n:Statement -&gt; ({ *n:Rule }) &lt;/node&gt;<br>
+				&lt;node id="1"&gt; *n:Rule -&gt; ({ ( *n:Condition *n:Directive ) }) &lt;/node&gt;<br>
+				&lt;node id="2"&gt; *n:Condition -&gt; ({ ( bpos *n:Region ) }) &lt;/node&gt;<br>
+				&lt;node id="3"&gt; *n:Region -&gt; ({ ( half *n:Team ) }) &lt;/node&gt;<br>
+				&lt;node id="4"&gt; *n:Team -&gt; ({ our }) &lt;/node&gt;<br>
+				...<br>
+				&lt;/mrl-parse&gt;
+			</tt></p>
+		</blockquote>
+
+		<p>
+			Before the colon is the LHS nonterminal of the MRL production used in
+			that node.  This redundant information is useful in identifying
+			annotation errors.
+		</p>
+
+		<p>
+			To use gold-standard word alignments during training, set the
+			<tt><b>wasp.align.model</b></tt> property to <tt>gold-standard</tt> in
+			the configuration file:
+		</p>
+
+		<blockquote>
+			<p>
+				<tt><b>wasp.align.model</b>=gold-standard</tt>
+			</p>
+		</blockquote>
+
+		<hr>
+
+		<h3>Footnotes</h3>
+
+		<a name="footnote1">
+		<p>
+			<a href="#text-footnote1"><sup>1</sup></a> In fact, the programs will not
+			break down even if the MRL grammar is ambiguous.  Given an MR, the MRL
+			parser will pick the first parse that it can find.  Although there is no
+			guarantee which parse it will pick, it is guaranteed that given the same
+			MR, the same parse will always be picked.
+		</p>
+
+		<a name="footnote2">
+		<p>
+			<a href="#text-footnote2"><sup>2</sup></a> Some settings are specified in
+			the configuration file while others are specified in the command line.
+			This is to make sure that the configuration file can be re-used during
+			testing and evaluation.
+		</p>
+
+		<a name="footnote3">
+		<p>
+			<a href="#text-footnote3"><sup>3</sup></a> The MRL strings inside the
+			<tt>mrl</tt> tags would be redundant when gold-standard word alignments
+			are used during training.  Training would be based on the gold-standard
+			MR parse trees, not the MRL strings.
+		</p>
+
+		<hr>
+
+		<p><i>
+			Yuk Wah Wong
+			(<a href="mailto:ywwong@cs.utexas.edu">ywwong@cs.utexas.edu</a>)
+		</i></p>
+	</body>
+</html>
+

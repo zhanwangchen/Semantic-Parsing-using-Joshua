@@ -1,0 +1,9 @@
+wasp.nl=en
+wasp.mrl=robocup-clang
+wasp.mrl.grammar=/usr/share/wasp-1.0/data/robocup-clang/mrl-grammar
+wasp.corpus.file=/usr/share/wasp-1.0/data/robocup-clang/corpus.xml
+wasp.align.model=giza++
+wasp.align.giza++.exec=/usr/local/bin/GIZA++
+wasp.translation.model=scfg
+wasp.scfg.init=/usr/share/wasp-1.0/data/robocup-clang/scfg-init-rules
+wasp.kbest=1

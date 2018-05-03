@@ -1,0 +1,25 @@
+WASP, Verison 1.0
+=================
+
+Copyright 2006 Yuk Wah Wong (The University of Texas at Austin).
+
+This is the WASP Semantic Parser, version 1.0.  WASP stands for Word-Alignment-
+based Semantic Parsing.  This implementation is based on the WASP algorithm
+presented in Wong & Mooney (2006).
+
+For more information, please consult the User's Manual (doc/manual.html).
+
+This distribution consists of the following files and directories:
+
+README - this read-me file.
+LICENSE - the GNU General Public License.
+data - the corpora.
+  data/geo-funql - the Geoquery corpus.
+  data/robocup-clang - the RoboCup corpus.
+doc - the documentation.
+  doc/manual.html - the User's Manual.
+  doc/geo-funql.html - info about the Geoquery functional query language.
+  doc/robocup-clang.html - info about the RoboCup coach language.
+src - the WASP source code.
+
+

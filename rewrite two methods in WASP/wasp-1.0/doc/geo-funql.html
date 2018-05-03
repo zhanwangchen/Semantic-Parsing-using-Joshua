@@ -1,0 +1,566 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+	<head>
+		<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+		<title>Geoquery: The Functional Query Language</title>
+	</head>
+	<body>
+		<h1>Geoquery: The Functional Query Language</h1>
+		
+		<p>
+			The functional query language used in the Geoquery domain is originated
+			from the query language described in the following dissertation (Section
+			7.3):
+		</p>
+
+		<blockquote>
+			<p>
+				John M. Zelle, <i>Using Inductive Logic Programming to Automate the
+				Construction of Natural Language Parsers</i>.  Ph.D. Dissertation,
+				The University of Texas at Austin, August 1995.
+			</p>
+		</blockquote>
+		
+		<h2>1. The Original Query Language</h2>
+
+		<p>
+			The original query language is basically a first-order logical form
+			augmented with some higher-order predicates or <i>meta-predicates</i>,
+			for handling issues such as quantification over implicit sets.  It was
+			not designed around any notion of appropriateness for representation of
+			natural language in general, but rather as a direct method of
+			compositionally translating sentences into unambiguous, logic-oriented
+			database queries.
+		</p>
+
+		<p>
+			The most basic constructs in the query language are the terms used to
+			represent the objects referenced in the target geography database
+			(Borland International, 1988):
+		</p>
+
+		<table border="0">
+			<tr>
+				<th>Type</th>
+				<th>Form</th>
+				<th>Example</th>
+			</tr>
+			<tr>
+				<td>city</td>
+				<td><tt>cityid(CityName,StateAbbrev)</tt></td>
+				<td><tt>cityid(austin,tx)</tt></td>
+			</tr>
+			<tr>
+				<td>country</td>
+				<td><tt>countryid(CountryName)</tt></td>
+				<td><tt>countryid(usa)</tt></td>
+			</tr>
+			<tr>
+				<td>place (lakes, mountains, etc.)</td>
+				<td><tt>placeid(PlaceName)</tt></td>
+				<td><tt>placeid('guadalupe peak')</tt></td>
+			</tr>
+			<tr>
+				<td>river</td>
+				<td><tt>riverid(RiverName)</tt></td>
+				<td><tt>riverid(colorado)</tt></td>
+			</tr>
+			<tr>
+				<td>state</td>
+				<td><tt>stateid(StateName)</tt></td>
+				<td><tt>stateid(texas)</tt></td>
+			</tr>
+		</table>
+		
+		<p>
+			There are also terms that represent the basic relations between the
+			objects:
+		</p>
+
+		<table border="0">
+			<tr>
+				<th>Form</th>
+				<th>Predicate</th>
+			</tr>
+			<tr>
+				<td><tt>capital(C)</tt></td>
+				<td><tt>C</tt> is a capital (city).</td>
+			</tr>
+			<tr>
+				<td><tt>city(C)</tt></td>
+				<td><tt>C</tt> is a city.</td>
+			</tr>
+			<tr>
+				<td><tt>lake(P)</tt></td>
+				<td><tt>P</tt> is a lake.</td>
+			</tr>
+			<tr>
+				<td><tt>major(X)</tt></td>
+				<td><tt>X</tt> is major (as in a <i>major</i> city or a <i>major</i>
+				river).</td>
+			</tr>
+			<tr>
+				<td><tt>mountain(P)</tt></td>
+				<td><tt>P</tt> is a mountain.</td>
+			</tr>
+			<tr>
+				<td><tt>place(P)</tt></td>
+				<td><tt>P</tt> is a place.</td>
+			</tr>
+			<tr>
+				<td><tt>river(R)</tt></td>
+				<td><tt>R</tt> is a river.</td>
+			</tr>
+			<tr>
+				<td><tt>state(S)</tt></td>
+				<td><tt>S</tt> is a state.</td>
+			</tr>
+			<tr>
+				<td><tt>area(S,A)</tt></td>
+				<td>The area of <tt>S</tt> is <tt>A</tt>.</td>
+			</tr>
+			<tr>
+				<td><tt>capital(S,C)</tt></td>
+				<td>The capital of <tt>S</tt> is <tt>C</tt>.</td>
+			</tr>
+			<tr>
+				<td><tt>const(V,C)</tt></td>
+				<td>Variable <tt>V</tt> is ground term <tt>C</tt>.</td>
+			</tr>
+			<tr>
+				<td><tt>density(S,D)</tt></td>
+				<td>The (population) density of <tt>S</tt> is <tt>D</tt>.</td>
+			</tr>
+			<tr>
+				<td><tt>elevation(P,E)</tt></td>
+				<td>The elevation of <tt>P</tt> is <tt>E</tt>.</td>
+			</tr>
+			<tr>
+				<td><tt>high_point(S,P)</tt></td>
+				<td>The highest point of <tt>S</tt> is <tt>P</tt>.</td>
+			</tr>
+			<tr>
+				<td><tt>higher(P1,P2)</tt></td>
+				<td>The elevation of <tt>P1</tt> is greater than that of
+				<tt>P2</tt>.</td>
+			</tr>
+			<tr>
+				<td><tt>loc(X,Y)</tt></td>
+				<td><tt>X</tt> is located in <tt>Y</tt>.
+			</tr>
+			<tr>
+				<td><tt>longer(R1,R2)</tt></td>
+				<td>The length of <tt>R1</tt> is greater than that of <tt>R2</tt>.</td>
+			</tr>
+			<tr>
+				<td><tt>low_point(S,P)</tt></td>
+				<td>The lowest point of <tt>S</tt> is <tt>P</tt>.</td>
+			</tr>
+			<tr>
+				<td><tt>lower(P1,P2)</tt></td>
+				<td>The elevation of <tt>P1</tt> is less than that of <tt>P2</tt>.</td>
+			</tr>
+			<tr>
+				<td><tt>len(R,L)</tt></td>
+				<td>The length of <tt>R</tt> is <tt>L</tt>.</td>
+			</tr>
+			<tr>
+				<td><tt>next_to(S1,S2)</tt></td>
+				<td><tt>S1</tt> is next to <tt>S2</tt>.</td>
+			</tr>
+			<tr>
+				<td><tt>population(X,Y)</tt></td>
+				<td>The population of <tt>X</tt> is <tt>Y</tt>.</td>
+			</tr>
+			<tr>
+				<td><tt>size(X,Y)</tt></td>
+				<td>The size of <tt>X</tt> is <tt>Y</tt>.</td>
+			</tr>
+			<tr>
+				<td><tt>traverse(R,S)</tt></td>
+				<td><tt>R</tt> traverses <tt>S</tt>.</td>
+			</tr>
+		</table>
+
+		<p>
+			Although the basic predicates provide most of the expressiveness of
+			Geoquery, meta-predicates are required to form complete queries.  These
+			predicates are distinguished in that they take completely-formed
+			conjunctive goals as one of their arguments, while the remaining
+			arguments are variables:
+		</p>
+
+		<table border="0">
+			<tr>
+				<th>Form</th>
+				<th>Explanation</th>
+			</tr>
+			<tr>
+				<td><tt>answer(V,Goal)</tt></td>
+				<td><tt>V</tt> is the variable of interest in <tt>Goal</tt>.</td>
+			</tr>
+			<tr>
+				<td><tt>largest(V,Goal)</tt></td>
+				<td><tt>Goal</tt> produces only the solution maximizing the size of
+				<tt>V</tt>.</td>
+			</tr>
+			<tr>
+				<td><tt>smallest(V,Goal)</tt></td>
+				<td>Analogous to <tt>largest</tt>.</td>
+			</tr>
+			<tr>
+				<td><tt>highest(V,Goal)</tt></td>
+				<td>Analogous to <tt>largest</tt> (with elevation).</td>
+			</tr>
+			<tr>
+				<td><tt>lowest(V,Goal)</tt></td>
+				<td>Analogous to <tt>highest</tt>.</td>
+			</tr>
+			<tr>
+				<td><tt>longest(V,Goal)</tt></td>
+				<td>Analogous to <tt>largest</tt> (with length).</td>
+			</tr>
+			<tr>
+				<td><tt>shortest(V,Goal)</tt></td>
+				<td>Analogous to <tt>longest</tt>.</td>
+			</tr>
+			<tr>
+				<td><tt>count(D,Goal,C)</tt></td>
+				<td><tt>C</tt> is the count of bindings for <tt>D</tt> satisfying
+				<tt>Goal</tt>.</td>
+			</tr>
+			<tr>
+				<td><tt>most(X,D,Goal)</tt></td>
+				<td><tt>Goal</tt> produces only the <tt>X</tt> maximizing the count of
+				<tt>D</tt>.</td>
+			</tr>
+			<tr>
+				<td><tt>fewest(X,D,Goal)</tt></td>
+				<td>Analogous to <tt>most</tt>.</td>
+			</tr>
+		</table>
+
+		<p>
+			The most important of the meta-predicates is <tt>answer/2</tt>.  This
+			predicate serves as a wrapper for query goals indicating the variable
+			whose binding is of interest (i.e. answers the question posed).
+			Executing a query of the form: <tt>answer(X,Goal)</tt> where <tt>X</tt>
+			is a variable appearing in <tt>Goal</tt> results in a listing of all the
+			unique values taken on by <tt>X</tt> for all possible proofs of
+			<tt>Goal</tt> generated through backtracking.  All queries come in this
+			form, and many of them do not require any other meta-predicates for their
+			expression.
+		</p>
+
+		<h2>2. The Functional Query Language</h2>
+
+		<p>
+			Kate et al. (2005) developed a variable-free, functional query language
+			for the Geoquery domain.  A new, variable-free language was needed
+			because their SILT algorithm does not handle variables (neither does
+			WASP).  The functional language was designed to allow for direct
+			translation of the functional forms into first-order logical forms, which
+			are used to query the target database.
+		</p>
+
+		<p>
+			The functional query language uses the same basic constructs as the
+			original query language to represent objects in the target database.
+			These constructs can be seen as a shorthand for lambda expressions that
+			generate the underlying first-order logical forms:
+		</p>
+
+		<table border="0">
+			<tr>
+				<th>Type</th>
+				<th>Form</th>
+				<th>Lambda Expression</th>
+			</tr>
+			<tr>
+				<td>city</td>
+				<td><tt>cityid(CityName,StateAbbrev)</tt></td>
+				<td><tt>&lambda;x.const(x,cityid(CityName,StateAbbrev))</tt></td>
+			</tr>
+			<tr>
+				<td>country</td>
+				<td><tt>countryid(CountryName)</tt></td>
+				<td><tt>&lambda;x.const(x,countryid(CountryName))</tt></td>
+			</tr>
+			<tr>
+				<td>place (lakes, mountains, etc.)</td>
+				<td><tt>placeid(PlaceName)</tt></td>
+				<td><tt>&lambda;x.const(x,placeid(PlaceName))</tt></td>
+			</tr>
+			<tr>
+				<td>river</td>
+				<td><tt>riverid(RiverName)</tt></td>
+				<td><tt>&lambda;x.const(x,riverid(RiverName))</tt></td>
+			</tr>
+			<tr>
+				<td>state</td>
+				<td><tt>stateid(StateName)</tt></td>
+				<td><tt>&lambda;x.const(x,stateid(StateName))</tt></td>
+			</tr>
+		</table>
+		
+		<p>
+			There are also special constructs that represent collections of objects:
+		</p>
+
+		<table border="0">
+			<tr>
+				<th>Collection</th>
+				<th>Form</th>
+				<th>Lambda Expression</th>
+			</tr>
+			<tr>
+				<td>all capital cities</td>
+				<td><tt>capital(all)</tt></td>
+				<td><tt>&lambda;x.capital(x)</tt></td>
+			</tr>
+			<tr>
+				<td>all cities</td>
+				<td><tt>city(all)</tt></td>
+				<td><tt>&lambda;x.city(x)</tt></td>
+			</tr>
+			<tr>
+				<td>all lakes</td>
+				<td><tt>lake(all)</tt></td>
+				<td><tt>&lambda;x.lake(x)</tt></td>
+			</tr>
+			<tr>
+				<td>all mountains</td>
+				<td><tt>mountain(all)</tt></td>
+				<td><tt>&lambda;x.mountain(x)</tt></td>
+			</tr>
+			<tr>
+				<td>all places (lakes, mountains, etc.)</td>
+				<td><tt>place(all)</tt></td>
+				<td><tt>&lambda;x.place(x)</tt></td>
+			</tr>
+			<tr>
+				<td>all rivers</td>
+				<td><tt>river(all)</tt></td>
+				<td><tt>&lambda;x.river(x)</tt></td>
+			</tr>
+			<tr>
+				<td>all states</td>
+				<td><tt>state(all)</tt></td>
+				<td><tt>&lambda;x.state(x)</tt></td>
+			</tr>
+		</table>
+
+		<p>
+			The following functional forms represent the basic relations between the
+			objects:
+		</p>
+
+		<table border="0">
+			<tr>
+				<th>Form</th>
+				<th>Lambda Expression</th>
+			</tr>
+			<tr>
+				<td><tt>capital(p)</tt></td>
+				<td><tt>&lambda;p.&lambda;x.(capital(x), p(x))</tt></td>
+			</tr>
+			<tr>
+				<td><tt>city(p)</tt></td>
+				<td><tt>&lambda;p.&lambda;x.(city(x), p(x))</tt></td>
+			</tr>
+			<tr>
+				<td><tt>lake(p)</tt></td>
+				<td><tt>&lambda;p.&lambda;x.(lake(x), p(x))</tt></td>
+			</tr>
+			<tr>
+				<td><tt>major(p)</tt></td>
+				<td><tt>&lambda;p.&lambda;x.(major(x), p(x))</tt></td>
+			</tr>
+			<tr>
+				<td><tt>mountain(p)</tt></td>
+				<td><tt>&lambda;p.&lambda;x.(mountain(x), p(x))</tt></td>
+			</tr>
+			<tr>
+				<td><tt>place(p)</tt></td>
+				<td><tt>&lambda;p.&lambda;x.(place(x), p(x))</tt></td>
+			</tr>
+			<tr>
+				<td><tt>river(p)</tt></td>
+				<td><tt>&lambda;p.&lambda;x.(river(x), p(x))</tt></td>
+			</tr>
+			<tr>
+				<td><tt>state(p)</tt></td>
+				<td><tt>&lambda;p.&lambda;x.(state(x), p(x))</tt></td>
+			</tr>
+			<tr>
+				<td><tt>area_1(p)</tt></td>
+				<td><tt>&lambda;p.&lambda;x.(area(S,x), p(S))</tt></td>
+			</tr>
+			<tr>
+				<td><tt>capital_1(p)</tt></td>
+				<td><tt>&lambda;p.&lambda;x.(capital(S,x), p(S))</tt></td>
+			</tr>
+			<tr>
+				<td><tt>capital_2(p)</tt></td>
+				<td><tt>&lambda;p.&lambda;x.(capital(x,C), p(C))</tt></td>
+			</tr>
+			<tr>
+				<td><tt>density_1(p)</tt></td>
+				<td><tt>&lambda;p.&lambda;x.(density(S,x), p(S))</tt></td>
+			</tr>
+			<tr>
+				<td><tt>elevation_1(p)</tt></td>
+				<td><tt>&lambda;p.&lambda;x.(elevation(P,x), p(P))</tt></td>
+			</tr>
+			<tr>
+				<td><tt>elevation_2(E)</tt></td>
+				<td><tt>&lambda;E.&lambda;x.elevation(x,E)</tt></td>
+			</tr>
+			<tr>
+				<td><tt>high_point_1(p)</tt></td>
+				<td><tt>&lambda;p.&lambda;x.(high_point(S,x), p(S))</tt></td>
+			</tr>
+			<tr>
+				<td><tt>high_point_2(p)</tt></td>
+				<td><tt>&lambda;p.&lambda;x.(high_point(x,P), p(P))</tt></td>
+			</tr>
+			<tr>
+				<td><tt>higher_2(p)</tt></td>
+				<td><tt>&lambda;p.&lambda;x.(higher(x,P2), p(P2))</tt></td>
+			</tr>
+			<tr>
+				<td><tt>loc_1(p)</tt></td>
+				<td><tt>&lambda;p.&lambda;x.(loc(X,x), p(X))</tt></td>
+			</tr>
+			<tr>
+				<td><tt>loc_2(p)</tt></td>
+				<td><tt>&lambda;p.&lambda;x.(loc(x,Y), p(Y))</tt></td>
+			</tr>
+			<tr>
+				<td><tt>longer(p)</tt></td>
+				<td><tt>&lambda;p.&lambda;x.(longer(x,R2), p(R2))</tt></td>
+			</tr>
+			<tr>
+				<td><tt>lower_2(p)</tt></td>
+				<td><tt>&lambda;p.&lambda;x.(lower(x,P2), p(P2))</tt></td>
+			</tr>
+			<tr>
+				<td><tt>len(p)</tt></td>
+				<td><tt>&lambda;p.&lambda;x.(len(R,x), p(R))</tt></td>
+			</tr>
+			<tr>
+				<td><tt>next_to_1(p)</tt></td>
+				<td><tt>&lambda;p.&lambda;x.(next_to(S1,x), p(S1))</tt></td>
+			</tr>
+			<tr>
+				<td><tt>next_to_2(p)</tt></td>
+				<td><tt>&lambda;p.&lambda;x.(next_to(x,S2), p(S2))</tt></td>
+			</tr>
+			<tr>
+				<td><tt>population_1(p)</tt></td>
+				<td><tt>&lambda;p.&lambda;x.(population(X,x), p(X))</tt></td>
+			</tr>
+			<tr>
+				<td><tt>size(p)</tt></td>
+				<td><tt>&lambda;p.&lambda;x.(size(X,x), p(X))</tt></td>
+			</tr>
+			<tr>
+				<td><tt>traverse_1(p)</tt></td>
+				<td><tt>&lambda;p.&lambda;x.(traverse(R,x), p(R))</tt></td>
+			</tr>
+			<tr>
+				<td><tt>traverse_2(p)</tt></td>
+				<td><tt>&lambda;p.&lambda;x.(traverse(x,S), p(S))</tt></td>
+			</tr>
+		</table>
+
+		<p>
+			The following functional forms correspond to the meta-predicates in the
+			original Geoquery language:
+		</p>
+
+		<table border="0">
+			<tr>
+				<th>Form</th>
+				<th>Lambda Expression</th>
+			</tr>
+			<tr>
+				<td><tt>answer(p)</tt></td>
+				<td><tt>&lambda;p.answer(V,p(V))</tt></td>
+			</tr>
+			<tr>
+				<td><tt>largest(p)</tt></td>
+				<td><tt>&lambda;p.largest(V,p(V))</tt></td>
+			</tr>
+			<tr>
+				<td><tt>largest_one(area_1(p))</tt></td>
+				<td><tt>&lambda;p.&lambda;x.largest(A,(area(x,A),p(x)))</tt></td>
+			</tr>
+			<tr>
+				<td><tt>largest_one(density_1(p))</tt></td>
+				<td><tt>&lambda;p.&lambda;x.largest(D,(density(x,D),p(x)))</tt></td>
+			</tr>
+			<tr>
+				<td><tt>largest_one(population_1(p))</tt></td>
+				<td><tt>&lambda;p.&lambda;x.largest(Y,(population(x,Y),p(x)))</tt></td>
+			</tr>
+			<tr>
+				<td><tt>smallest(p)</tt></td>
+				<td>Analogous to <tt>largest</tt>.</td>
+			</tr>
+			<tr>
+				<td><tt>smallest_one(...)</tt></td>
+				<td>Analogous to <tt>largest_one(...)</tt>.</td>
+			</tr>
+			<tr>
+				<td><tt>highest(p)</tt></td>
+				<td>Analogous to <tt>largest</tt> (with the meta-predicate
+				<tt>highest/2</tt>).</td>
+			</tr>
+			<tr>
+				<td><tt>lowest(p)</tt></td>
+				<td>Analogous to <tt>highest</tt>.</td>
+			</tr>
+			<tr>
+				<td><tt>longest(p)</tt></td>
+				<td>Analogous to <tt>largest</tt> (with the meta-predicate
+				<tt>longest/2</tt>).</td>
+			</tr>
+			<tr>
+				<td><tt>shortest(p)</tt></td>
+				<td>Analogous to <tt>longest</tt>.</td>
+			</tr>
+			<tr>
+				<td><tt>count(p)</tt></td>
+				<td><tt>&lambda;p.&lambda;x.count(D,p(D),x)</tt></td>
+			</tr>
+			<tr>
+				<td><tt>most(p<sub>D</sub>)</tt></td>
+				<td><tt>&lambda;p<sub>D</sub>.&lambda;x.most(x,D,p<sub>D</sub>(x))</tt>
+				(where <tt>D</tt> is the only free variable in the lambda expression
+				<tt>p<sub>D</sub></tt>)</td>
+			</tr>
+			<tr>
+				<td><tt>fewest(p<sub>D</sub>)</tt></td>
+				<td><tt>&lambda;p<sub>D</sub>.&lambda;x.fewest(x,D,p<sub>D</sub>(x))</tt>
+				(where <tt>D</tt> is the only free variable in the lambda expression
+				<tt>p<sub>D</sub></tt>)</td>
+			</tr>
+		</table>
+
+		<p>
+			A Prolog script that translates functional forms into the original
+			first-order logical forms (and executes them on the fly) is included in
+			this distribution.  This script was written by Rohit J. Kate (<a
+			href="mailto:rjkate@cs.utexas.edu">rjkate@cs.utexas.edu</a>), and is
+			located in the <tt>data/geo-funql/eval</tt> directory.
+		</p>
+
+		<hr>
+
+		<p><i>
+			Yuk Wah Wong (<a
+			href="mailto:ywwong@cs.utexas.edu">ywwong@cs.utexas.edu</a>)
+		</i></p>
+	</body>
+</html>

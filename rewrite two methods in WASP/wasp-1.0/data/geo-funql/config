@@ -1,0 +1,13 @@
+wasp.nl=en
+wasp.mrl=geo-funql
+wasp.mrl.grammar=F:/Germany/lecture/NLP/final project/wasp-1.0/data/geo-funql/mrl-grammar
+wasp.corpus.file=F:/Germany/lecture/NLP/final project/wasp-1.0/data/geo-funql/corpus.xml
+#wasp.align.model=giza++
+wasp.align.model=gold-standard
+wasp.align.giza++.exec=/usr/local/bin/GIZA++
+wasp.translation.model=scfg
+wasp.scfg.init=F:/Germany/lecture/NLP/final project/wasp-1.0/data/geo-funql/scfg-init-rules
+wasp.kbest=1
+wasp.domain.geo.names=F:/Germany/lecture/NLP/final project/wasp-1.0/data/geo-funql/entity-names
+wasp.domain.geo.eval.dir=F:/Germany/lecture/NLP/final project/wasp-1.0/data/geo-funql/geo-funql/eval
+wasp.sicstus.exec=/usr/local/bin/sicstus

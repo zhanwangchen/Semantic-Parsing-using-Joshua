@@ -1,0 +1,1621 @@
+file a
+example 2
+correct translation:
+answer(river(loc_2(stateid('arkansas'))))
+parse 0: 
+answer(river( loc_2( stateid( 'arkansas'))))
+example 7
+correct translation:
+answer(state(loc_2(countryid('usa'))))
+parse 0: 
+*answer(Give me all state( countryid()))
+example 8
+correct translation:
+answer(city(loc_2(stateid('texas'))))
+parse 0: 
+*answer(Give me city( loc_2( stateid( 'texas'))))
+example 9
+correct translation:
+answer(city(loc_2(countryid('usa'))))
+parse 0: 
+*answer(Give me city( loc_2( countryid())))
+example 14
+correct translation:
+answer(longest(river(traverse_2(countryid('usa')))))
+parse 0: 
+*answer(Give me state( traverse_1( longest( river( 'usa')))))
+example 16
+correct translation:
+answer(state(next_to_2(stateid('utah'))))
+parse 0: 
+*answer(Give me state( next_to_2( stateid( 'utah'))))
+example 17
+correct translation:
+answer(size(stateid('alaska')))
+parse 0: 
+answer(size( stateid( 'alaska')))
+example 20
+correct translation:
+answer(size(stateid('north dakota')))
+parse 0: 
+answer(size( stateid( 'north dakota')))
+example 27
+correct translation:
+answer(elevation_1(highest(place(loc_2(stateid('montana'))))))
+parse 0: 
+*answer(count( elevation_1( highest( place( loc_2( stateid( 'montana')))))))
+example 30
+correct translation:
+answer(elevation_1(highest(place(loc_2(stateid('delaware'))))))
+parse 0: 
+*answer(count( elevation_1( highest( place( loc_2( stateid( 'delaware')))))))
+example 34
+correct translation:
+answer(size(stateid('texas')))
+parse 0: 
+answer(size( stateid( 'texas')))
+example 35
+correct translation:
+answer(size(largest(city(loc_2(stateid('alaska'))))))
+parse 0: 
+*answer(largest( city( loc_2( stateid( 'alaska' riverid())))))
+example 37
+correct translation:
+answer(len(river(riverid('colorado'))))
+parse 0: 
+*answer(len( riverid( 'colorado' river( all))))
+example 43
+correct translation:
+answer(len(river(riverid('mississippi'))))
+parse 0: 
+*answer(river( loc_2( stateid( len( riverid( 'mississippi'))))))
+example 46
+correct translation:
+answer(len(river(riverid('ohio'))))
+parse 0: 
+*answer(len( riverid( 'ohio' river( all))))
+example 51
+correct translation:
+answer(count(city(loc_2(stateid('louisiana')))))
+parse 0: 
+answer(count( city( loc_2( stateid( 'louisiana')))))
+example 61
+correct translation:
+answer(population_1(stateid('alabama')))
+parse 0: 
+*answer(count( stateid( 'alabama')))
+example 62
+correct translation:
+answer(population_1(cityid('boulder', _)))
+parse 0: 
+answer(population_1( cityid( 'boulder', _)))
+example 66
+correct translation:
+answer(count(major(city(loc_2(stateid('arizona'))))))
+parse 0: 
+answer(count( major( city( loc_2( stateid( 'arizona'))))))
+example 73
+correct translation:
+answer(count(major(river(traverse_2(stateid('ohio'))))))
+parse 0: 
+*answer(count( major( river( stateid( 'ohio')))))
+example 75
+correct translation:
+answer(population_1(stateid('iowa')))
+parse 0: 
+*answer(count( loc_2( countryid( _))))
+example 76
+correct translation:
+answer(population_1(stateid('new york')))
+parse 0: 
+*answer(count( loc_2( stateid( 'new york'))))
+example 82
+correct translation:
+answer(population_1(cityid('detroit', _)))
+parse 0: 
+*answer(population_1( cityid( _)))
+example 85
+correct translation:
+answer(population_1(cityid('kalamazoo', _)))
+parse 0: 
+answer(population_1( cityid( 'kalamazoo', _)))
+example 93
+correct translation:
+answer(population_1(stateid('rhode island')))
+parse 0: 
+*answer(population_1( cityid( 'rhode island' _)))
+example 96
+correct translation:
+answer(population_1(stateid('south dakota')))
+parse 0: 
+*answer(population_1( cityid( 'sd' _)))
+example 101
+correct translation:
+answer(population_1(capital(loc_2(stateid('texas')))))
+parse 0: 
+*answer(count( population_1( capital( loc_2( stateid( 'texas'))))))
+example 102
+correct translation:
+answer(population_1(smallest(state(next_to_2(stateid('wyoming'))))))
+parse 0: 
+*answer(population_1( cityid( smallest( state( next_to_2( stateid( 'wyoming')))))))
+example 103
+correct translation:
+answer(population_1(largest_one(density_1(state(all)))))
+parse 0: 
+*answer(population_1( cityid( state( largest_one( density_1( state( all)))))))
+example 104
+correct translation:
+answer(population_1(countryid('usa')))
+parse 0: 
+*answer(population_1( cityid( countryid( 'usa' _))))
+example 105
+correct translation:
+answer(population_1(stateid('washington')))
+parse 0: 
+*answer(population_1( cityid( _)))
+example 106
+correct translation:
+answer(population_1(cityid('washington', 'dc')))
+parse 0: 
+*answer(population_1( cityid( 'wa' _)))
+example 109
+correct translation:
+answer(population_1(stateid('utah')))
+parse 0: 
+*answer(count( stateid( 'utah')))
+example 111
+correct translation:
+answer(count(river(riverid('colorado'))))
+parse 0: 
+*answer(count( river( loc_2( stateid( 'colorado')))))
+example 112
+correct translation:
+answer(count(river(loc_2(stateid('colorado')))))
+parse 0: 
+answer(count( river( loc_2( stateid( 'colorado')))))
+example 114
+correct translation:
+answer(count(river(loc_2(stateid('iowa')))))
+parse 0: 
+answer(count( river( loc_2( stateid( 'iowa')))))
+example 117
+correct translation:
+answer(count(river(loc_2(most(state(loc_1(river(all))))))))
+parse 0: 
+answer(count( river( loc_2( most( state( loc_1( river( all))))))))
+example 118
+correct translation:
+answer(count(river(loc_2(state(loc_1(highest(place(all))))))))
+parse 0: 
+answer(count( river( loc_2( state( loc_1( highest( place( all))))))))
+example 120
+correct translation:
+answer(count(river(loc_2(stateid('idaho')))))
+parse 0: 
+*answer(count( river( loc_2( countryid( _)))))
+example 121
+correct translation:
+answer(count(river(loc_2(stateid('texas')))))
+parse 0: 
+*answer(count( river( loc_2( countryid( _)))))
+example 127
+correct translation:
+answer(count(river(loc_2(stateid('washington')))))
+parse 0: 
+answer(count( river( loc_2( stateid( 'washington')))))
+example 128
+correct translation:
+answer(count(river(traverse_2(stateid('texas')))))
+parse 0: 
+answer(count( river( traverse_2( stateid( 'texas')))))
+example 134
+correct translation:
+answer(count(state(all)))
+parse 0: 
+answer(count( state( all)))
+example 138
+correct translation:
+answer(count(state(next_to_2(state(all)))))
+parse 0: 
+*answer(count( state( next_to_2( smallest_one( state( all))))))
+example 139
+correct translation:
+answer(count(state(intersection(next_to_2(stateid('colorado')) , next_to_2(stateid('new mexico'))))))
+parse 0: 
+*answer(count( state( next_to_2( 'colorado' , next_to_2( stateid( 'new mexico'))))))
+example 141
+correct translation:
+answer(count(state(next_to_2(stateid('iowa')))))
+parse 0: 
+answer(count( state( next_to_2( stateid( 'iowa')))))
+example 146
+correct translation:
+answer(count(state(next_to_2(river(riverid('mississippi'))))))
+parse 0: 
+answer(count( state( next_to_2( river( riverid( 'mississippi'))))))
+example 148
+correct translation:
+answer(count(state(next_to_2(largest_one(population_1(state(all)))))))
+parse 0: 
+answer(count( state( next_to_2( largest_one( population_1( state( all)))))))
+example 149
+correct translation:
+answer(count(exclude(state(all), loc_1(river(all)))))
+parse 0: 
+*answer(count( state( exclude( river( all ,)))))
+example 150
+correct translation:
+answer(count(state(next_to_1(stateid('iowa')))))
+parse 0: 
+answer(count( state( next_to_1( stateid( 'iowa')))))
+example 152
+correct translation:
+answer(count(state(next_to_1(stateid('tennessee')))))
+parse 0: 
+answer(count( state( next_to_1( stateid( 'tennessee')))))
+example 153
+correct translation:
+answer(count(state(traverse_1(river(riverid('colorado'))))))
+parse 0: 
+*answer(count( state( next_to_1( river( traverse_2( stateid( 'colorado')))))))
+example 154
+correct translation:
+answer(count(state(traverse_1(river(riverid('colorado'))))))
+parse 0: 
+*answer(count( state( traverse_1( river( riverid( 'colorado' _))))))
+example 155
+correct translation:
+answer(count(state(traverse_1(river(riverid('mississippi'))))))
+parse 0: 
+*answer(count( _ state( traverse_1( river( riverid( 'mississippi'))))))
+example 157
+correct translation:
+answer(count(state(traverse_1(river(riverid('missouri'))))))
+parse 0: 
+*answer(count( state( traverse_1( river( riverid( 'missouri' _))))))
+example 159
+correct translation:
+answer(count(state(loc_1(city(cityid('rochester', _))))))
+parse 0: 
+*answer(count( state( loc_1( city( _)))))
+example 160
+correct translation:
+answer(count(state(loc_1(city(cityid('springfield', _))))))
+parse 0: 
+answer(count( state( loc_1( city( cityid( 'springfield', _))))))
+example 161
+correct translation:
+answer(count(state(loc_1(place(higher_2(highest(place(loc_2(state(loc_1(largest(capital(city(loc_2(countryid('usa'))))))))))))))))
+parse 0: 
+*answer(count( state( loc_1( place( _ capital( highest( place( loc_2( state( loc_1( largest( city( loc_2( countryid( 'usa')))))))))))))))
+example 162
+correct translation:
+answer(count(state(loc_1(city(cityid('austin', _))))))
+parse 0: 
+answer(count( state( loc_1( city( cityid( 'austin', _))))))
+example 164
+correct translation:
+answer(count(state(loc_1(major(river(all))))))
+parse 0: 
+answer(count( state( loc_1( major( river( all))))))
+example 169
+correct translation:
+answer(state(loc_1(placeid('mount mckinley'))))
+parse 0: 
+*answer(loc_1( placeid( 'mount mckinley' _)))
+example 171
+correct translation:
+answer(state(loc_1(cityid('rochester', _))))
+parse 0: 
+*answer(state( loc_1( cityid( _))))
+example 173
+correct translation:
+answer(state(all))
+parse 0: 
+*answer(List state( all))
+example 182
+correct translation:
+answer(population_1(cityid('boulder', _)))
+parse 0: 
+*answer(count( cityid( 'boulder', _)))
+example 187
+correct translation:
+answer(population_1(cityid('boulder', _)))
+parse 0: 
+*answer('boulder', all)
+example 188
+correct translation:
+answer(river(loc_2(stateid('new york'))))
+parse 0: 
+*answer(cityid( 'new york', _))
+example 189
+correct translation:
+answer(state(loc_1(capital(cityid('sacramento', _)))))
+parse 0: 
+*answer(state( loc_1( capital( cityid( _)))))
+example 197
+correct translation:
+answer(state(traverse_1(riverid('mississippi'))))
+parse 0: 
+*answer(_ state( traverse_1( riverid( 'mississippi'))))
+example 198
+correct translation:
+answer(state(traverse_1(riverid('mississippi'))))
+parse 0: 
+*answer(_ state( traverse_1( riverid( 'mississippi'))))
+example 202
+correct translation:
+answer(capital(city(loc_2(state(next_to_2(stateid('texas')))))))
+parse 0: 
+answer(capital( city( loc_2( state( next_to_2( stateid( 'texas')))))))
+example 204
+correct translation:
+answer(capital(loc_2(state(next_to_2(stateid('missouri'))))))
+parse 0: 
+answer(capital( loc_2( state( next_to_2( stateid( 'missouri'))))))
+example 208
+correct translation:
+answer(city(loc_2(state(loc_1(highest(place(all)))))))
+parse 0: 
+answer(city( loc_2( state( loc_1( highest( place( all)))))))
+example 211
+correct translation:
+answer(lake(loc_2(state(next_to_2(stateid('texas'))))))
+parse 0: 
+answer(lake( loc_2( state( next_to_2( stateid( 'texas'))))))
+example 214
+correct translation:
+answer(major(city(loc_2(stateid('alaska')))))
+parse 0: 
+answer(major( city( loc_2( stateid( 'alaska')))))
+example 225
+correct translation:
+answer(major(city(loc_2(state(traverse_1(riverid('mississippi')))))))
+parse 0: 
+*answer(major( city( loc_2( state( traverse_1( riverid( 'mississippi' _)))))))
+example 234
+correct translation:
+answer(major(city(loc_2(stateid('texas')))))
+parse 0: 
+answer(major( city( loc_2( stateid( 'texas')))))
+example 238
+correct translation:
+answer(major(river(loc_2(stateid('ohio')))))
+parse 0: 
+answer(major( river( loc_2( stateid( 'ohio')))))
+example 241
+correct translation:
+answer(state(next_to_2(stateid('michigan'))))
+parse 0: 
+*answer(state( stateid( 'michigan')))
+example 243
+correct translation:
+answer(population_1(stateid('mississippi')))
+parse 0: 
+*answer(population_1( loc_2( stateid( 'mississippi'))))
+example 244
+correct translation:
+answer(population_1(major(city(loc_2(stateid('montana'))))))
+parse 0: 
+*answer(state( loc_2( all major( city( loc_2( stateid( 'montana')))))))
+example 250
+correct translation:
+answer(population_1(major(city(loc_2(stateid('texas'))))))
+parse 0: 
+answer(population_1( major( city( loc_2( stateid( 'texas'))))))
+example 251
+correct translation:
+answer(population_1(state(traverse_1(river(riverid('mississippi'))))))
+parse 0: 
+*answer(population_1( state( traverse_1( riverid( 'mississippi' river( all))))))
+example 258
+correct translation:
+answer(river(loc_2(stateid('montana'))))
+parse 0: 
+answer(river( loc_2( stateid( 'montana'))))
+example 259
+correct translation:
+answer(state(all))
+parse 0: 
+answer(state( all))
+example 262
+correct translation:
+answer(state(traverse_1(longest(river(all)))))
+parse 0: 
+*answer(state( traverse_1( longest( river( _)))))
+example 265
+correct translation:
+answer(largest(capital(loc_2(countryid('usa')))))
+parse 0: 
+*answer(capital( largest( 'usa' _)))
+example 267
+correct translation:
+answer(city(loc_2(stateid('california'))))
+parse 0: 
+answer(city( loc_2( stateid( 'california'))))
+example 269
+correct translation:
+answer(largest_one(population_1(city(loc_2(stateid('texas'))))))
+parse 0: 
+*answer(city( loc_2( stateid( 'texas' highest()))))
+example 270
+correct translation:
+answer(largest_one(population_1(city(all))))
+parse 0: 
+*answer(state( loc_1( largest_one( population_1( city( all))))))
+example 273
+correct translation:
+answer(largest_one(density_1(city(loc_2(countryid('usa'))))))
+parse 0: 
+*answer(highest( density_1( state( loc_2( countryid( 'usa' city( all)))))))
+example 274
+correct translation:
+answer(capital(loc_2(stateid('iowa'))))
+parse 0: 
+*answer(capital( stateid( 'iowa')))
+example 281
+correct translation:
+answer(area_1(stateid('florida')))
+parse 0: 
+*answer(state( cityid( stateid( 'florida'))))
+example 282
+correct translation:
+answer(area_1(stateid('idaho')))
+parse 0: 
+*answer(state( cityid( stateid( 'idaho'))))
+example 284
+correct translation:
+answer(area_1(stateid('maryland')))
+parse 0: 
+*answer(state( cityid( 'maryland' loc_2( countryid( _)))))
+example 289
+correct translation:
+answer(area_1(stateid('texas')))
+parse 0: 
+*answer(area_1( cityid( stateid( 'texas'))))
+example 290
+correct translation:
+answer(area_1(largest(state(all))))
+parse 0: 
+answer(area_1( largest( state( all))))
+example 294
+correct translation:
+answer(area_1(state(all)))
+parse 0: 
+*answer(area_1( cityid( loc_2( state( all)))))
+example 297
+correct translation:
+answer(density_1(countryid('usa')))
+parse 0: 
+*answer(population_1( loc_2( countryid( 'usa' state( all)))))
+example 298
+correct translation:
+answer(density_1(stateid('pennsylvania')))
+parse 0: 
+*answer(density_1( loc_2( stateid( 'pennsylvania'))))
+example 301
+correct translation:
+answer(largest(capital(city(loc_2(countryid('usa'))))))
+parse 0: 
+*answer(state( capital( city( loc_2( _)))))
+example 302
+correct translation:
+answer(largest(city(loc_2(stateid('arizona')))))
+parse 0: 
+*answer(largest( city( cityid( stateid( 'arizona')))))
+example 311
+correct translation:
+answer(largest(city(loc_2(countryid('usa')))))
+parse 0: 
+*answer(_ largest( city( loc_2( countryid( 'usa')))))
+example 314
+correct translation:
+answer(longest(river(loc_2(stateid('illinois')))))
+parse 0: 
+*answer(river( cityid( stateid( 'illinois'))))
+example 317
+correct translation:
+answer(largest(state(loc_2(countryid('usa')))))
+parse 0: 
+*answer(largest( state( loc_2( countryid()))))
+example 320
+correct translation:
+answer(capital(loc_2(stateid('colorado'))))
+parse 0: 
+*answer(capital( cityid( stateid( 'colorado'))))
+example 322
+correct translation:
+answer(capital(loc_2(stateid('hawaii'))))
+parse 0: 
+*answer(state( cityid( stateid( 'hawaii'))))
+example 323
+correct translation:
+answer(capital(loc_2(stateid('illinois'))))
+parse 0: 
+*answer(capital( cityid( stateid( 'illinois'))))
+example 325
+correct translation:
+answer(capital(loc_2(stateid('iowa'))))
+parse 0: 
+answer(capital( loc_2( stateid( 'iowa'))))
+example 327
+correct translation:
+answer(capital(loc_2(stateid('maryland'))))
+parse 0: 
+*answer(state( cityid( 'maryland' _)))
+example 331
+correct translation:
+answer(capital(loc_2(stateid('new jersey'))))
+parse 0: 
+*answer(capital( cityid( stateid( 'new jersey'))))
+example 333
+correct translation:
+answer(capital(loc_2(stateid('north dakota'))))
+parse 0: 
+*answer(capital( cityid( stateid( 'north dakota'))))
+example 335
+correct translation:
+answer(capital(loc_2(stateid('pennsylvania'))))
+parse 0: 
+answer(capital( loc_2( stateid( 'pennsylvania'))))
+example 336
+correct translation:
+answer(capital(loc_2(state(loc_1(city(cityid('durham', _)))))))
+parse 0: 
+*answer(capital( cityid( state( loc_1( city( cityid( _)))))))
+example 337
+correct translation:
+answer(capital(loc_2(stateid('texas'))))
+parse 0: 
+*answer(capital( cityid( stateid( 'texas'))))
+example 341
+correct translation:
+answer(capital(loc_2(smallest(state(all)))))
+parse 0: 
+answer(capital( loc_2( smallest( state( all)))))
+example 342
+correct translation:
+answer(capital(loc_2(state(stateid('texas')))))
+parse 0: 
+answer(capital( loc_2( state( stateid( 'texas')))))
+example 348
+correct translation:
+answer(capital(loc_2(largest_one(density_1(state(all))))))
+parse 0: 
+*answer(capital( loc_2( state( stateid( largest_one( density_1()))))))
+example 352
+correct translation:
+answer(capital(loc_2(stateid('vermont'))))
+parse 0: 
+*answer(capital( cityid( stateid( 'vermont'))))
+example 356
+correct translation:
+answer(sum(area_1(state(all))))
+parse 0: 
+*answer(state( area_1( cityid( all state( all)))))
+example 360
+correct translation:
+answer(elevation_1(placeid('death valley')))
+parse 0: 
+*answer(state( cityid( _)))
+example 361
+correct translation:
+answer(elevation_1(highest(place(loc_2(countryid('usa'))))))
+parse 0: 
+*answer(state( cityid( _ highest( place( loc_2( countryid( 'usa')))))))
+example 362
+correct translation:
+answer(elevation_1(placeid('mount mckinley')))
+parse 0: 
+*answer(state( cityid( 'mount mckinley' _)))
+example 363
+correct translation:
+answer(elevation_1(highest(mountain(loc_2(stateid('texas'))))))
+parse 0: 
+*answer(highest( mountain( loc_2( loc_2( stateid( 'texas'))))))
+example 367
+correct translation:
+answer(highest(place(loc_2(stateid('south carolina')))))
+parse 0: 
+answer(highest( place( loc_2( stateid( 'south carolina')))))
+example 372
+correct translation:
+answer(highest(mountain(loc_2(countryid('usa')))))
+parse 0: 
+*answer(highest( mountain( loc_2( _))))
+example 374
+correct translation:
+answer(highest(place(loc_2(stateid('colorado')))))
+parse 0: 
+answer(highest( place( loc_2( stateid( 'colorado')))))
+example 376
+correct translation:
+answer(highest(place(loc_2(state(loc_1(place(elevation_2(0))))))))
+parse 0: 
+*answer(highest( place( loc_2( state( lowest( place( cityid( _))))))))
+example 377
+correct translation:
+answer(highest(place(loc_2(stateid('florida')))))
+parse 0: 
+answer(highest( place( loc_2( stateid( 'florida')))))
+example 380
+correct translation:
+answer(highest(place(loc_2(stateid('maine')))))
+parse 0: 
+answer(highest( place( loc_2( stateid( 'maine')))))
+example 384
+correct translation:
+answer(highest(place(loc_2(stateid('ohio')))))
+parse 0: 
+answer(highest( place( loc_2( stateid( 'ohio')))))
+example 387
+correct translation:
+answer(highest(place(loc_2(stateid('texas')))))
+parse 0: 
+answer(highest( place( loc_2( stateid( 'texas')))))
+example 389
+correct translation:
+answer(highest(place(loc_2(smallest(state(all))))))
+parse 0: 
+answer(highest( place( loc_2( smallest( state( all))))))
+example 390
+correct translation:
+answer(highest(place(loc_2(state(loc_1(capital(cityid('austin', _))))))))
+parse 0: 
+answer(highest( place( loc_2( state( loc_1( capital( cityid( 'austin', _))))))))
+example 393
+correct translation:
+answer(highest(place(loc_2(most(state(traverse_1(river(all))))))))
+parse 0: 
+*answer(largest_one( highest( place( loc_2( state( all))))))
+example 398
+correct translation:
+answer(highest(place(loc_2(countryid('usa')))))
+parse 0: 
+*answer(_ highest( place( loc_2( countryid( 'usa')))))
+example 402
+correct translation:
+answer(highest(place(loc_2(smallest_one(density_1(state(all)))))))
+parse 0: 
+*answer(highest( place( loc_2( state( loc_1( smallest_one( density_1( _))))))))
+example 404
+correct translation:
+answer(largest(capital(all)))
+parse 0: 
+answer(largest( capital( all)))
+example 405
+correct translation:
+answer(largest(capital(city(loc_2(countryid('usa'))))))
+parse 0: 
+*answer(capital( largest( city( loc_2( _)))))
+example 413
+correct translation:
+answer(largest(city(loc_2(smallest(state(traverse_1(riverid('mississippi'))))))))
+parse 0: 
+*answer(largest( city( loc_2( smallest( state( traverse_1( riverid( 'mississippi' _))))))))
+example 414
+correct translation:
+answer(largest(city(loc_2(state(next_to_2(stateid('california')))))))
+parse 0: 
+answer(largest( city( loc_2( state( next_to_2( stateid( 'california')))))))
+example 420
+correct translation:
+answer(longest(river(loc_2(state(stateid('washington'))))))
+parse 0: 
+*answer(largest_one( river( loc_2( state( all)))))
+example 424
+correct translation:
+answer(largest_one(population_1(capital_1(state(all)))))
+parse 0: 
+*answer(population_1( largest( state( capital( loc_2( _))))))
+example 429
+correct translation:
+answer(largest(state(next_to_2(largest_one(population_1(state(all)))))))
+parse 0: 
+*answer(population_1( largest( state( next_to_2( state( loc_1( highest( _))))))))
+example 430
+correct translation:
+answer(largest(state(next_to_2(state(loc_1(lowest(place(loc_2(countryid('usa'))))))))))
+parse 0: 
+*answer(largest( state( next_to_2( stateid( state( loc_1( lowest( place( loc_2( countryid( 'usa')))))))))))
+example 433
+correct translation:
+answer(len(river(riverid('colorado'))))
+parse 0: 
+*answer(state( cityid( 'colorado' river( all))))
+example 435
+correct translation:
+answer(len(longest(river(loc_2(countryid('usa'))))))
+parse 0: 
+*answer(_ len( longest( river( loc_2( countryid( 'usa'))))))
+example 437
+correct translation:
+answer(len(river(riverid('mississippi'))))
+parse 0: 
+*answer(state( cityid( river( riverid( 'mississippi')))))
+example 439
+correct translation:
+answer(len(most(river(traverse_2(state(all))))))
+parse 0: 
+*answer(len( most( river( traverse_2( cityid( state( all)))))))
+example 441
+correct translation:
+answer(len(most(river(traverse_2(state(all))))))
+parse 0: 
+*answer(riverid( len( most( river( traverse_2( state( all)))))))
+example 442
+correct translation:
+answer(longest(river(all)))
+parse 0: 
+*answer(state( longest( river( all))))
+example 444
+correct translation:
+answer(longest(river(loc_2(countryid('usa')))))
+parse 0: 
+*answer(stateid( longest( river( loc_2( countryid( 'usa'))))))
+example 446
+correct translation:
+answer(longest(river(loc_2(stateid('florida')))))
+parse 0: 
+*answer(state( longest( river( loc_2( stateid( 'florida'))))))
+example 447
+correct translation:
+answer(longest(river(loc_2(stateid('mississippi')))))
+parse 0: 
+answer(longest( river( loc_2( stateid( 'mississippi')))))
+example 448
+correct translation:
+answer(longest(river(loc_2(stateid('new york')))))
+parse 0: 
+answer(longest( river( loc_2( stateid( 'new york')))))
+example 453
+correct translation:
+answer(longest(river(loc_2(state(loc_1(highest(place(all))))))))
+parse 0: 
+answer(longest( river( loc_2( state( loc_1( highest( place( all))))))))
+example 456
+correct translation:
+answer(longest(river(loc_2(countryid('usa')))))
+parse 0: 
+*answer(stateid( longest( river( loc_2( countryid( 'usa'))))))
+example 459
+correct translation:
+answer(longest(river(traverse_2(state(next_to_2(stateid('indiana')))))))
+parse 0: 
+*answer(state( longest( river( traverse_2( state( next_to_2( stateid( 'indiana'))))))))
+example 460
+correct translation:
+answer(longest(river(traverse_2(stateid('colorado')))))
+parse 0: 
+answer(longest( river( traverse_2( stateid( 'colorado')))))
+example 461
+correct translation:
+answer(longest(river(traverse_2(state(next_to_2(most(state(next_to_2(state(all))))))))))
+parse 0: 
+*answer(longest( river( state( next_to_2( most( state( next_to_2( state( all)))))))))
+example 470
+correct translation:
+answer(lowest(place(loc_2(stateid('oregon')))))
+parse 0: 
+*answer(lowest( place( cityid( stateid( 'oregon')))))
+example 473
+correct translation:
+answer(lowest(place(loc_2(state(stateid('texas'))))))
+parse 0: 
+answer(lowest( place( loc_2( state( stateid( 'texas'))))))
+example 475
+correct translation:
+answer(lowest(place(loc_2(countryid('usa')))))
+parse 0: 
+*answer(_ lowest( place( loc_2( countryid( 'usa')))))
+example 477
+correct translation:
+answer(lowest(place(loc_2(state(traverse_1(river(riverid('colorado'))))))))
+parse 0: 
+*answer(lowest( place( cityid( all state( traverse_1( river( traverse_2( stateid( 'colorado')))))))))
+example 482
+correct translation:
+answer(highest(place(loc_2(cityid('san francisco', _)))))
+parse 0: 
+*answer(state( place( cityid( 'san francisco', _))))
+example 485
+correct translation:
+answer(largest_one(population_1(state(next_to_2(stateid('oklahoma'))))))
+parse 0: 
+*answer(largest_one( state( next_to_2( stateid( 'oklahoma')))))
+example 486
+correct translation:
+answer(largest_one(population_1(city(all))))
+parse 0: 
+answer(largest_one( population_1( city( all))))
+example 494
+correct translation:
+answer(density_1(state(loc_1(capital(cityid('austin', _))))))
+parse 0: 
+*answer(population_1( density_1( loc_2( state( loc_1( capital( cityid( 'austin', _))))))))
+example 495
+correct translation:
+answer(density_1(stateid('maine')))
+parse 0: 
+*answer(population_1( density_1( cityid( stateid( 'maine')))))
+example 502
+correct translation:
+answer(density_1(stateid('wyoming')))
+parse 0: 
+*answer(population_1( density_1( cityid( stateid( 'wyoming')))))
+example 505
+correct translation:
+answer(population_1(stateid('arizona')))
+parse 0: 
+*answer(population_1( cityid( stateid( 'arizona'))))
+example 510
+correct translation:
+answer(population_1(cityid('boston', 'ma')))
+parse 0: 
+*answer(population_1( loc_2( stateid( 'massachusetts'))))
+example 516
+correct translation:
+answer(population_1(stateid('hawaii')))
+parse 0: 
+*answer(state( cityid( stateid( 'hawaii'))))
+example 519
+correct translation:
+answer(population_1(stateid('illinois')))
+parse 0: 
+*answer(population_1( cityid( stateid( 'illinois'))))
+example 521
+correct translation:
+answer(population_1(stateid('maryland')))
+parse 0: 
+*answer(state( cityid( 'maryland' _)))
+example 524
+correct translation:
+answer(population_1(stateid('new mexico')))
+parse 0: 
+*answer(population_1( cityid( stateid( 'new mexico'))))
+example 528
+correct translation:
+answer(population_1(cityid('portland', 'me')))
+parse 0: 
+*answer(population_1( cityid( 'portland', stateid( 'maine'))))
+example 531
+correct translation:
+answer(population_1(cityid('san antonio', _)))
+parse 0: 
+*answer(state( cityid( 'san _)))
+example 532
+correct translation:
+answer(population_1(cityid('seattle', _)))
+parse 0: 
+*answer(state( cityid( 'seattle', _)))
+example 543
+correct translation:
+answer(population_1(largest(state(all))))
+parse 0: 
+answer(population_1( largest( state( all))))
+example 547
+correct translation:
+answer(population_1(most(state(next_to_2(state(all))))))
+parse 0: 
+*answer(population_1( cityid( most( state( next_to_2( state( all)))))))
+example 551
+correct translation:
+answer(population_1(stateid('utah')))
+parse 0: 
+*answer(population_1( cityid( stateid( 'utah'))))
+example 553
+correct translation:
+answer(population_1(cityid('washington', 'dc')))
+parse 0: 
+*answer(state( cityid( 'wa' _)))
+example 555
+correct translation:
+answer(shortest(river(all)))
+parse 0: 
+*answer(state( shortest( river( all))))
+example 566
+correct translation:
+answer(size(capital(loc_2(stateid('texas')))))
+parse 0: 
+*answer(state( cityid( capital( stateid( 'texas')))))
+example 567
+correct translation:
+answer(size(largest(state(loc_2(countryid('usa'))))))
+parse 0: 
+*answer(_ largest( state( loc_2( countryid( 'usa')))))
+example 573
+correct translation:
+answer(smallest(city(loc_2(countryid('usa')))))
+parse 0: 
+*answer(smallest( city( loc_2( _))))
+example 579
+correct translation:
+answer(smallest(state(loc_2(countryid('usa')))))
+parse 0: 
+*answer(smallest( state( loc_2( countryid()))))
+example 583
+correct translation:
+answer(smallest(state(traverse_1(longest(river(all))))))
+parse 0: 
+*answer(smallest( state( traverse_1( longest( river( _))))))
+example 589
+correct translation:
+answer(state(loc_1(lowest(place(all)))))
+parse 0: 
+answer(state( loc_1( lowest( place( all)))))
+example 600
+correct translation:
+answer(major(river(traverse_2(stateid('illinois')))))
+parse 0: 
+answer(major( river( traverse_2( stateid( 'illinois')))))
+example 601
+correct translation:
+answer(mountain(loc_2(stateid('alaska'))))
+parse 0: 
+*answer(mountains loc_2( stateid( 'alaska')))
+example 603
+correct translation:
+answer(river(traverse_2(stateid('texas'))))
+parse 0: 
+answer(river( traverse_2( stateid( 'texas'))))
+example 604
+correct translation:
+answer(most(river(traverse_2(state(all)))))
+parse 0: 
+answer(most( river( traverse_2( state( all)))))
+example 605
+correct translation:
+answer(longest(river(loc_2(countryid('usa')))))
+parse 0: 
+*answer(state( longest( river( loc_2( countryid( 'usa' _))))))
+example 609
+correct translation:
+answer(river(traverse_2(stateid('virginia'))))
+parse 0: 
+*answer(state( traverse_1( river( _))))
+example 612
+correct translation:
+answer(river(loc_2(stateid('nevada'))))
+parse 0: 
+*answer(river( loc_2( state( stateid( 'nevada')))))
+example 613
+correct translation:
+answer(river(loc_2(stateid('new mexico'))))
+parse 0: 
+answer(river( loc_2( stateid( 'new mexico'))))
+example 615
+correct translation:
+answer(river(loc_2(state(next_to_2(stateid('texas'))))))
+parse 0: 
+answer(river( loc_2( state( next_to_2( stateid( 'texas'))))))
+example 618
+correct translation:
+answer(river(loc_2(stateid('texas'))))
+parse 0: 
+answer(river( loc_2( stateid( 'texas'))))
+example 619
+correct translation:
+answer(exclude(river(all), traverse_2(stateid('tennessee'))))
+parse 0: 
+*answer(exclude( river( all , traverse_2( stateid( 'tennessee')))))
+example 627
+correct translation:
+answer(river(traverse_2(cityid('austin', 'tx'))))
+parse 0: 
+*answer(river( traverse_2( stateid( 'texas'))))
+example 631
+correct translation:
+answer(river(traverse_2(stateid('new york'))))
+parse 0: 
+answer(river( traverse_2( stateid( 'new york'))))
+example 634
+correct translation:
+answer(river(traverse_2(stateid('west virginia'))))
+parse 0: 
+*answer(river( traverse_2( state( West 'virginia' _))))
+example 635
+correct translation:
+answer(river(traverse_2(most(state(next_to_2(state(all)))))))
+parse 0: 
+*answer(river( traverse_2( state( most( state( next_to_2( state( all))))))))
+example 644
+correct translation:
+answer(state(loc_1(highest(place(loc_2(countryid('usa')))))))
+parse 0: 
+*answer(state( loc_1( highest( place( loc_2( _))))))
+example 649
+correct translation:
+answer(state(loc_1(city(cityid('flint', _)))))
+parse 0: 
+*answer(state( Flint city( all)))
+example 660
+correct translation:
+answer(largest_one(density_1(state(all))))
+parse 0: 
+answer(largest_one( density_1( state( all))))
+example 661
+correct translation:
+answer(largest_one(population_1(state(all))))
+parse 0: 
+*answer(largest_one( population_1( urban state( all))))
+example 671
+correct translation:
+answer(state(loc_1(shortest(river(all)))))
+parse 0: 
+answer(state( loc_1( shortest( river( all)))))
+example 674
+correct translation:
+answer(smallest_one(population_1(state(all))))
+parse 0: 
+answer(smallest_one( population_1( state( all))))
+example 675
+correct translation:
+answer(smallest_one(density_1(state(all))))
+parse 0: 
+answer(smallest_one( density_1( state( all))))
+example 678
+correct translation:
+answer(state(loc_1(cityid('austin', _))))
+parse 0: 
+answer(state( loc_1( cityid( 'austin', _))))
+example 681
+correct translation:
+answer(state(loc_1(capital(cityid('columbus', _)))))
+parse 0: 
+*answer(state( loc_1( capital( cityid( Columbus _)))))
+example 683
+correct translation:
+answer(state(loc_1(cityid('des moines', _))))
+parse 0: 
+answer(state( loc_1( cityid( 'des moines', _))))
+example 695
+correct translation:
+answer(state(next_to_2(stateid('alaska'))))
+parse 0: 
+answer(state( next_to_2( stateid( 'alaska'))))
+example 697
+correct translation:
+answer(state(next_to_2(stateid('delaware'))))
+parse 0: 
+answer(state( next_to_2( stateid( 'delaware'))))
+example 700
+correct translation:
+answer(state(next_to_2(stateid('hawaii'))))
+parse 0: 
+answer(state( next_to_2( stateid( 'hawaii'))))
+example 708
+correct translation:
+answer(state(next_to_2(stateid('ohio'))))
+parse 0: 
+answer(state( next_to_2( stateid( 'ohio'))))
+example 709
+correct translation:
+answer(state(next_to_2(stateid('rhode island'))))
+parse 0: 
+answer(state( next_to_2( stateid( 'rhode island'))))
+example 711
+correct translation:
+answer(state(next_to_2(state(next_to_2(stateid('mississippi'))))))
+parse 0: 
+answer(state( next_to_2( state( next_to_2( stateid( 'mississippi'))))))
+example 714
+correct translation:
+answer(state(next_to_2(state(next_to_2(largest_one(population_1(state(all))))))))
+parse 0: 
+answer(state( next_to_2( state( next_to_2( largest_one( population_1( state( all))))))))
+example 717
+correct translation:
+answer(state(next_to_2(state(traverse_1(riverid('mississippi'))))))
+parse 0: 
+*answer(state( next_to_2( state( next_to_2( state( traverse_1( riverid( 'mississippi'))))))))
+example 721
+correct translation:
+answer(state(next_to_2(largest_one(population_1(state(all))))))
+parse 0: 
+*answer(most( state( next_to_2( state( all)))))
+example 723
+correct translation:
+answer(state(next_to_2(most(state(loc_1(city(all)))))))
+parse 0: 
+answer(state( next_to_2( most( state( loc_1( city( all)))))))
+example 726
+correct translation:
+answer(state(next_to_2(most(state(loc_1(city(all)))))))
+parse 0: 
+answer(state( next_to_2( most( state( loc_1( city( all)))))))
+example 730
+correct translation:
+answer(state(traverse_1(river(riverid('colorado')))))
+parse 0: 
+*answer(state( traverse_1( river( riverid( 'colorado' _)))))
+example 735
+correct translation:
+answer(state(traverse_1(riverid('missouri'))))
+parse 0: 
+*answer(state( traverse_1( riverid( _))))
+example 736
+correct translation:
+answer(state(traverse_1(river(riverid('ohio')))))
+parse 0: 
+*answer(state( traverse_1( go river( riverid( 'ohio' _)))))
+example 744
+correct translation:
+answer(state(loc_1(city(cityid('portland', _)))))
+parse 0: 
+answer(state( loc_1( city( cityid( 'portland', _)))))
+example 745
+correct translation:
+answer(state(loc_1(city(cityid('rochester', _)))))
+parse 0: 
+*answer(state( loc_1( city( cityid( _)))))
+example 748
+correct translation:
+answer(state(loc_1(river(riverid('colorado')))))
+parse 0: 
+*answer(state( loc_1( cityid( river( all)))))
+example 751
+correct translation:
+answer(state(high_point_2(higher_2(high_point_1(stateid('colorado'))))))
+parse 0: 
+*answer(state( capital_2( high_point_1( place( higher_2( cityid( stateid( 'colorado'))))))))
+example 752
+correct translation:
+answer(intersection(state(loc_2(countryid('usa'))), loc_1(city(cityid('springfield', _)))))
+parse 0: 
+*answer(state( loc_2( countryid( 'usa' loc_1( city( all))))))
+example 757
+correct translation:
+answer(loc_1(mountain(all)))
+parse 0: 
+*answer(loc_1( mountains all))
+example 758
+correct translation:
+answer(loc_1(cityid('austin', _)))
+parse 0: 
+answer(loc_1( cityid( 'austin', _)))
+example 759
+correct translation:
+answer(loc_1(cityid('baton rouge', _)))
+parse 0: 
+*answer(loc_1( cityid( Baton Rouge _)))
+example 760
+correct translation:
+answer(loc_1(cityid('dallas', _)))
+parse 0: 
+answer(loc_1( cityid( 'dallas', _)))
+example 766
+correct translation:
+answer(loc_1(placeid('mount whitney')))
+parse 0: 
+*answer(loc_1( placeid( 'mount whitney' _)))
+example 770
+correct translation:
+answer(loc_1(cityid('san diego', _)))
+parse 0: 
+*answer(loc_1( cityid( 'san Diego _)))
+example 772
+correct translation:
+answer(loc_1(cityid('scotts valley', _)))
+parse 0: 
+*answer(loc_1( cityid( Scotts _)))
+example 773
+correct translation:
+answer(loc_1(cityid('springfield', _)))
+parse 0: 
+answer(loc_1( cityid( 'springfield', _)))
+example 780
+correct translation:
+answer(lowest(place(loc_2(stateid('iowa')))))
+parse 0: 
+*answer(loc_1( cityid( lowest( spot stateid( 'iowa')))))
+example 782
+correct translation:
+answer(loc_1(smallest(city(all))))
+parse 0: 
+answer(loc_1( smallest( city( all))))
+example 784
+correct translation:
+answer(exclude(capital(all), major(city(all))))
+parse 0: 
+*answer(state( , major( city( all))))
+example 789
+correct translation:
+answer(lowest(place(loc_2(state(traverse_1(riverid('mississippi')))))))
+parse 0: 
+*answer(state( lowest( place( loc_2( state( traverse_1( riverid( 'mississippi'))))))))
+example 791
+correct translation:
+answer(smallest(state(all)))
+parse 0: 
+*answer(smallest( state( all _)))
+example 797
+correct translation:
+answer(river(loc_2(stateid('alaska'))))
+parse 0: 
+*answer(river( loc_2( state( stateid( 'alaska')))))
+example 800
+correct translation:
+answer(river(traverse_2(stateid('alaska'))))
+parse 0: 
+*answer(river( traverse_2( state( _))))
+example 802
+correct translation:
+answer(river(traverse_2(state(next_to_2(state(loc_1(capital(cityid('austin', _)))))))))
+parse 0: 
+answer(river( traverse_2( state( next_to_2( state( loc_1( capital( cityid( 'austin', _)))))))))
+example 807
+correct translation:
+answer(state(next_to_2(stateid('florida'))))
+parse 0: 
+answer(state( next_to_2( stateid( 'florida'))))
+example 808
+correct translation:
+answer(state(next_to_2(stateid('hawaii'))))
+parse 0: 
+answer(state( next_to_2( stateid( 'hawaii'))))
+example 809
+correct translation:
+answer(most(state(next_to_2(state(all)))))
+parse 0: 
+answer(most( state( next_to_2( state( all)))))
+example 813
+correct translation:
+answer(largest_one(population_1(state(all))))
+parse 0: 
+*answer(population_1( largest( state( all))))
+example 814
+correct translation:
+answer(largest_one(density_1(state(all))))
+parse 0: 
+answer(largest_one( density_1( state( all))))
+example 816
+correct translation:
+answer(state(loc_1(highest(place(all)))))
+parse 0: 
+answer(state( loc_1( highest( place( all)))))
+example 817
+correct translation:
+answer(state(loc_1(highest(place(all)))))
+parse 0: 
+*answer(highest( mountain( loc_2( state( all)))))
+example 819
+correct translation:
+answer(largest_one(density_1(state(all))))
+parse 0: 
+*answer(highest( density_1( state( all))))
+example 820
+correct translation:
+answer(state(loc_1(largest(city(all)))))
+parse 0: 
+answer(state( loc_1( largest( city( all)))))
+example 823
+correct translation:
+answer(state(loc_1(longest(river(all)))))
+parse 0: 
+answer(state( loc_1( longest( river( all)))))
+example 824
+correct translation:
+answer(state(loc_1(lowest(place(all)))))
+parse 0: 
+answer(state( loc_1( lowest( place( all)))))
+example 826
+correct translation:
+answer(smallest_one(density_1(state(all))))
+parse 0: 
+answer(smallest_one( density_1( state( all))))
+example 827
+correct translation:
+answer(most(state(loc_1(major(city(all))))))
+parse 0: 
+answer(most( state( loc_1( major( city( all))))))
+example 829
+correct translation:
+answer(most(state(traverse_1(major(river(all))))))
+parse 0: 
+answer(most( state( traverse_1( major( river( all))))))
+example 832
+correct translation:
+answer(most(state(loc_1(river(all)))))
+parse 0: 
+answer(most( state( loc_1( river( all)))))
+example 835
+correct translation:
+answer(smallest_one(area_1(state(next_to_2(stateid('texas'))))))
+parse 0: 
+answer(smallest_one( area_1( state( next_to_2( stateid( 'texas'))))))
+example 838
+correct translation:
+answer(smallest_one(density_1(state(all))))
+parse 0: 
+answer(smallest_one( density_1( state( all))))
+example 841
+correct translation:
+answer(state(loc_1(city(cityid('denver', _)))))
+parse 0: 
+*answer(state( 'denver', city( cityid( _))))
+example 844
+correct translation:
+answer(state(next_to_2(stateid('alabama'))))
+parse 0: 
+*answer(state( adjoin stateid( 'alabama')))
+example 848
+correct translation:
+answer(state(next_to_2(stateid('colorado'))))
+parse 0: 
+answer(state( next_to_2( stateid( 'colorado'))))
+example 856
+correct translation:
+answer(state(next_to_2(stateid('south dakota'))))
+parse 0: 
+answer(state( next_to_2( stateid( 'south dakota'))))
+example 857
+correct translation:
+answer(state(next_to_2(state(traverse_1(riverid('mississippi'))))))
+parse 0: 
+*answer(state( next_to_2( state( traverse_1( riverid( 'mississippi' _))))))
+example 858
+correct translation:
+answer(state(next_to_2(stateid('texas'))))
+parse 0: 
+answer(state( next_to_2( stateid( 'texas'))))
+example 862
+correct translation:
+answer(state(loc_1(largest(city(capital_1(state(all)))))))
+parse 0: 
+*answer(state( capital_2( cityid( largest( city( all))))))
+example 863
+correct translation:
+answer(state(traverse_1(river(riverid('colorado')))))
+parse 0: 
+*answer(state( river( traverse_2( stateid( 'colorado')))))
+example 867
+correct translation:
+answer(state(traverse_1(longest(river(all)))))
+parse 0: 
+*answer(state( longest( river( _))))
+example 868
+correct translation:
+answer(state(traverse_1(longest(river(all)))))
+parse 0: 
+*answer(state( traverse_1( river( riverid( _)))))
+example 869
+correct translation:
+answer(state(traverse_1(river(riverid('mississippi')))))
+parse 0: 
+*answer(state( traverse_1( river( riverid( 'mississippi' _)))))
+example 872
+correct translation:
+answer(state(traverse_1(river(riverid('missouri')))))
+parse 0: 
+*answer(state( traverse_1( river( riverid( 'missouri' _)))))
+example 875
+correct translation:
+answer(state(loc_1(city(cityid('austin', _)))))
+parse 0: 
+answer(state( loc_1( city( cityid( 'austin', _)))))
+example 877
+correct translation:
+answer(state(loc_1(place(higher_2(highest(place(loc_2(stateid('texas')))))))))
+parse 0: 
+answer(state( loc_1( place( higher_2( highest( place( loc_2( stateid( 'texas')))))))))
+begin precision
+mean 0.37142857142857144
+95%-confidence-interval 0.37142857142857144 0.37142857142857144
+end precision
+begin recall
+mean 0.37142857142857144
+95%-confidence-interval 0.37142857142857144 0.37142857142857144
+end recall
+begin f-measure
+mean 0.37142857142857144
+95%-confidence-interval 0.37142857142857144 0.37142857142857144
+end f-measure
+begin precision-recall-curve
+begin mean
+0.0 1.0
+0.01 0.39285714285714285
+0.02 0.39285714285714285
+0.03 0.39285714285714285
+0.04 0.39285714285714285
+0.05 0.39285714285714285
+0.06 0.39285714285714285
+0.07 0.39285714285714285
+0.08 0.39285714285714285
+0.09 0.39285714285714285
+0.1 0.39285714285714285
+0.11 0.39285714285714285
+0.12 0.39080459770114945
+0.13 0.375
+0.14 0.375
+0.15 0.375
+0.16 0.375
+0.17 0.375
+0.18 0.375
+0.19 0.375
+0.2 0.375
+0.21 0.375
+0.22 0.375
+0.23 0.375
+0.24 0.375
+0.25 0.375
+0.26 0.375
+0.27 0.375
+0.28 0.375
+0.29 0.375
+0.3 0.375
+0.31 0.375
+0.32 0.375
+0.33 0.375
+0.34 0.375
+0.35 0.375
+0.36 0.375
+0.37 0.37142857142857144
+0.38 0.0
+0.39 0.0
+0.4 0.0
+0.41 0.0
+0.42 0.0
+0.43 0.0
+0.44 0.0
+0.45 0.0
+0.46 0.0
+0.47 0.0
+0.48 0.0
+0.49 0.0
+0.5 0.0
+0.51 0.0
+0.52 0.0
+0.53 0.0
+0.54 0.0
+0.55 0.0
+0.56 0.0
+0.57 0.0
+0.58 0.0
+0.59 0.0
+0.6 0.0
+0.61 0.0
+0.62 0.0
+0.63 0.0
+0.64 0.0
+0.65 0.0
+0.66 0.0
+0.67 0.0
+0.68 0.0
+0.69 0.0
+0.7 0.0
+0.71 0.0
+0.72 0.0
+0.73 0.0
+0.74 0.0
+0.75 0.0
+0.76 0.0
+0.77 0.0
+0.78 0.0
+0.79 0.0
+0.8 0.0
+0.81 0.0
+0.82 0.0
+0.83 0.0
+0.84 0.0
+0.85 0.0
+0.86 0.0
+0.87 0.0
+0.88 0.0
+0.89 0.0
+0.9 0.0
+0.91 0.0
+0.92 0.0
+0.93 0.0
+0.94 0.0
+0.95 0.0
+0.96 0.0
+0.97 0.0
+0.98 0.0
+0.99 0.0
+1.0 0.0
+end mean
+begin 95%-confidence-interval
+0.0 1.0 1.0
+0.01 0.39285714285714285 0.39285714285714285
+0.02 0.39285714285714285 0.39285714285714285
+0.03 0.39285714285714285 0.39285714285714285
+0.04 0.39285714285714285 0.39285714285714285
+0.05 0.39285714285714285 0.39285714285714285
+0.06 0.39285714285714285 0.39285714285714285
+0.07 0.39285714285714285 0.39285714285714285
+0.08 0.39285714285714285 0.39285714285714285
+0.09 0.39285714285714285 0.39285714285714285
+0.1 0.39285714285714285 0.39285714285714285
+0.11 0.39285714285714285 0.39285714285714285
+0.12 0.39080459770114945 0.39080459770114945
+0.13 0.375 0.375
+0.14 0.375 0.375
+0.15 0.375 0.375
+0.16 0.375 0.375
+0.17 0.375 0.375
+0.18 0.375 0.375
+0.19 0.375 0.375
+0.2 0.375 0.375
+0.21 0.375 0.375
+0.22 0.375 0.375
+0.23 0.375 0.375
+0.24 0.375 0.375
+0.25 0.375 0.375
+0.26 0.375 0.375
+0.27 0.375 0.375
+0.28 0.375 0.375
+0.29 0.375 0.375
+0.3 0.375 0.375
+0.31 0.375 0.375
+0.32 0.375 0.375
+0.33 0.375 0.375
+0.34 0.375 0.375
+0.35 0.375 0.375
+0.36 0.375 0.375
+0.37 0.37142857142857144 0.37142857142857144
+0.38 0.0 0.0
+0.39 0.0 0.0
+0.4 0.0 0.0
+0.41 0.0 0.0
+0.42 0.0 0.0
+0.43 0.0 0.0
+0.44 0.0 0.0
+0.45 0.0 0.0
+0.46 0.0 0.0
+0.47 0.0 0.0
+0.48 0.0 0.0
+0.49 0.0 0.0
+0.5 0.0 0.0
+0.51 0.0 0.0
+0.52 0.0 0.0
+0.53 0.0 0.0
+0.54 0.0 0.0
+0.55 0.0 0.0
+0.56 0.0 0.0
+0.57 0.0 0.0
+0.58 0.0 0.0
+0.59 0.0 0.0
+0.6 0.0 0.0
+0.61 0.0 0.0
+0.62 0.0 0.0
+0.63 0.0 0.0
+0.64 0.0 0.0
+0.65 0.0 0.0
+0.66 0.0 0.0
+0.67 0.0 0.0
+0.68 0.0 0.0
+0.69 0.0 0.0
+0.7 0.0 0.0
+0.71 0.0 0.0
+0.72 0.0 0.0
+0.73 0.0 0.0
+0.74 0.0 0.0
+0.75 0.0 0.0
+0.76 0.0 0.0
+0.77 0.0 0.0
+0.78 0.0 0.0
+0.79 0.0 0.0
+0.8 0.0 0.0
+0.81 0.0 0.0
+0.82 0.0 0.0
+0.83 0.0 0.0
+0.84 0.0 0.0
+0.85 0.0 0.0
+0.86 0.0 0.0
+0.87 0.0 0.0
+0.88 0.0 0.0
+0.89 0.0 0.0
+0.9 0.0 0.0
+0.91 0.0 0.0
+0.92 0.0 0.0
+0.93 0.0 0.0
+0.94 0.0 0.0
+0.95 0.0 0.0
+0.96 0.0 0.0
+0.97 0.0 0.0
+0.98 0.0 0.0
+0.99 0.0 0.0
+1.0 0.0 0.0
+end 95%-confidence-interval
+end precision-recall-curve

@@ -1,0 +1,719 @@
+[X] ||| abilene ||| 'abilene' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| abingdon ||| 'abingdon' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| akron ||| 'akron' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| alameda ||| 'alameda' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| albany ||| 'albany' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| albuquerque ||| 'albuquerque' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| alexandria ||| 'alexandria' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| alhambra ||| 'alhambra' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| allentown ||| 'allentown' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| altoona ||| 'altoona' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| amarillo ||| 'amarillo' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| anaheim ||| 'anaheim' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| anchorage ||| 'anchorage' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| anderson ||| 'anderson' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| ann arbor ||| 'ann arbor' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| appleton ||| 'appleton' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| arlington ||| 'arlington' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| arlington heights ||| 'arlington heights' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| arvada ||| 'arvada' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| atlanta ||| 'atlanta' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| aurora ||| 'aurora' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| austin ||| 'austin' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| bakersfield ||| 'bakersfield' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| baltimore ||| 'baltimore' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| baton rouge ||| 'baton rouge' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| bayonne ||| 'bayonne' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| beaumont ||| 'beaumont' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| bellevue ||| 'bellevue' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| berkeley ||| 'berkeley' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| bethesda ||| 'bethesda' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| bethlehem ||| 'bethlehem' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| billings ||| 'billings' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| birmingham ||| 'birmingham' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| bloomington ||| 'bloomington' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| boise ||| 'boise' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| boston ||| 'boston' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| boulder ||| 'boulder' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| bridgeport ||| 'bridgeport' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| bristol ||| 'bristol' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| bristol township ||| 'bristol township' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| brockton ||| 'brockton' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| brownsville ||| 'brownsville' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| buena park ||| 'buena park' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| buffalo ||| 'buffalo' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| burbank ||| 'burbank' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| cambridge ||| 'cambridge' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| camden ||| 'camden' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| canton ||| 'canton' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| carson ||| 'carson' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| casper ||| 'casper' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| cedar rapids ||| 'cedar rapids' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| champaign ||| 'champaign' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| charleston ||| 'charleston' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| charlotte ||| 'charlotte' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| chattanooga ||| 'chattanooga' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| cheektowaga ||| 'cheektowaga' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| cherry hill ||| 'cherry hill' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| chesapeake ||| 'chesapeake' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| chicago ||| 'chicago' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| chula vista ||| 'chula vista' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| cicero ||| 'cicero' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| cincinnati ||| 'cincinnati' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| citrus heights ||| 'citrus heights' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| clearwater ||| 'clearwater' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| cleveland ||| 'cleveland' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| clifton ||| 'clifton' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| clinton ||| 'clinton' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| colorado springs ||| 'colorado springs' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| columbia ||| 'columbia' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| columbus ||| 'columbus' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| compton ||| 'compton' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| concord ||| 'concord' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| corpus christi ||| 'corpus christi' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| costa mesa ||| 'costa mesa' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| cranston ||| 'cranston' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| dallas ||| 'dallas' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| daly city ||| 'daly city' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| danbury ||| 'danbury' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| davenport ||| 'davenport' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| dayton ||| 'dayton' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| dearborn ||| 'dearborn' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| dearborn heights ||| 'dearborn heights' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| decatur ||| 'decatur' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| denver ||| 'denver' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| des moines ||| 'des moines' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| detroit ||| 'detroit' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| dover ||| 'dover' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| downey ||| 'downey' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| dubuque ||| 'dubuque' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| duluth ||| 'duluth' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| dundalk ||| 'dundalk' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| durham ||| 'durham' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| east los angeles ||| 'east los angeles' ||| 5 5 5 5 0 0 ||| 0-0 1-1 2-2
+[X] ||| east orange ||| 'east orange' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| edison ||| 'edison' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| el cajon ||| 'el cajon' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| el monte ||| 'el monte' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| el paso ||| 'el paso' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| elgin ||| 'elgin' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| elizabeth ||| 'elizabeth' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| elyria ||| 'elyria' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| erie ||| 'erie' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| escondido ||| 'escondido' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| euclid ||| 'euclid' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| eugene ||| 'eugene' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| evanston ||| 'evanston' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| evansville ||| 'evansville' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| ewa ||| 'ewa' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| fairfield ||| 'fairfield' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| fall river ||| 'fall river' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| fargo ||| 'fargo' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| farmington hills ||| 'farmington hills' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| fayetteville ||| 'fayetteville' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| flint ||| 'flint' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| fort collins ||| 'fort collins' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| fort lauderdale ||| 'fort lauderdale' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| fort smith ||| 'fort smith' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| fort wayne ||| 'fort wayne' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| fort worth ||| 'fort worth' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| framingham ||| 'framingham' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| fremont ||| 'fremont' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| fresno ||| 'fresno' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| fullerton ||| 'fullerton' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| gainesville ||| 'gainesville' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| garden grove ||| 'garden grove' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| garland ||| 'garland' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| gary ||| 'gary' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| glendale ||| 'glendale' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| grand prairie ||| 'grand prairie' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| grand rapids ||| 'grand rapids' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| great falls ||| 'great falls' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| green bay ||| 'green bay' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| greensboro ||| 'greensboro' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| greenville ||| 'greenville' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| greenwich ||| 'greenwich' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| hamilton ||| 'hamilton' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| hammond ||| 'hammond' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| hampton ||| 'hampton' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| hartford ||| 'hartford' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| hayward ||| 'hayward' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| high point ||| 'high point' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| hollywood ||| 'hollywood' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| honolulu ||| 'honolulu' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| houston ||| 'houston' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| huntington ||| 'huntington' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| huntington beach ||| 'huntington beach' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| huntsville ||| 'huntsville' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| independence ||| 'independence' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| indianapolis ||| 'indianapolis' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| inglewood ||| 'inglewood' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| irondequoit ||| 'irondequoit' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| irvine ||| 'irvine' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| irving ||| 'irving' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| irvington ||| 'irvington' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| jackson ||| 'jackson' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| jacksonville ||| 'jacksonville' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| jersey city ||| 'jersey city' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| joliet ||| 'joliet' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| kalamazoo ||| 'kalamazoo' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| kansas city ||| 'kansas city' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| kendall ||| 'kendall' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| kenner ||| 'kenner' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| kenosha ||| 'kenosha' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| kettering ||| 'kettering' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| knoxville ||| 'knoxville' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| koolaupoko ||| 'koolaupoko' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| lafayette ||| 'lafayette' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| lake charles ||| 'lake charles' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| lakewood ||| 'lakewood' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| lansing ||| 'lansing' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| laredo ||| 'laredo' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| largo ||| 'largo' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| las vegas ||| 'las vegas' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| lawrence ||| 'lawrence' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| lawton ||| 'lawton' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| levittown ||| 'levittown' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| lexington ||| 'lexington' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| lincoln ||| 'lincoln' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| little rock ||| 'little rock' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| livonia ||| 'livonia' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| long beach ||| 'long beach' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| longview ||| 'longview' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| lorain ||| 'lorain' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| los angeles ||| 'los angeles' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| louisville ||| 'louisville' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| lowell ||| 'lowell' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| lower merion ||| 'lower merion' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| lubbock ||| 'lubbock' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| lynchburg ||| 'lynchburg' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| lynn ||| 'lynn' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| macon ||| 'macon' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| madison ||| 'madison' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| manchester ||| 'manchester' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| mcallen ||| 'mcallen' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| medford ||| 'medford' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| memphis ||| 'memphis' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| meriden ||| 'meriden' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| mesa ||| 'mesa' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| mesquite ||| 'mesquite' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| metairie ||| 'metairie' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| miami ||| 'miami' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| miami beach ||| 'miami beach' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| middletown ||| 'middletown' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| midland ||| 'midland' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| milwaukee ||| 'milwaukee' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| minneapolis ||| 'minneapolis' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| mobile ||| 'mobile' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| modesto ||| 'modesto' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| monroe ||| 'monroe' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| montgomery ||| 'montgomery' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| mount vernon ||| 'mount vernon' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| mountain view ||| 'mountain view' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| muncie ||| 'muncie' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| nashua ||| 'nashua' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| nashville ||| 'nashville' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| new bedford ||| 'new bedford' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| new britain ||| 'new britain' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| new haven ||| 'new haven' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| new orleans ||| 'new orleans' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| new rochelle ||| 'new rochelle' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| new york ||| 'new york' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| newark ||| 'newark' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| newport beach ||| 'newport beach' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| newport news ||| 'newport news' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| newton ||| 'newton' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| niagara falls ||| 'niagara falls' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| norfolk ||| 'norfolk' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| norman ||| 'norman' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| north charleston ||| 'north charleston' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| north little rock ||| 'north little rock' ||| 5 5 5 5 0 0 ||| 0-0 1-1 2-2
+[X] ||| norwalk ||| 'norwalk' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| oak lawn ||| 'oak lawn' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| oakland ||| 'oakland' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| oceanside ||| 'oceanside' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| odessa ||| 'odessa' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| ogden ||| 'ogden' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| oklahoma city ||| 'oklahoma city' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| omaha ||| 'omaha' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| ontario ||| 'ontario' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| orange ||| 'orange' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| orlando ||| 'orlando' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| overland park ||| 'overland park' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| oxnard ||| 'oxnard' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| parma ||| 'parma' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| pasadena ||| 'pasadena' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| paterson ||| 'paterson' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| pawtucket ||| 'pawtucket' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| penn hills ||| 'penn hills' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| pensacola ||| 'pensacola' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| peoria ||| 'peoria' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| philadelphia ||| 'philadelphia' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| phoenix ||| 'phoenix' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| pittsburgh ||| 'pittsburgh' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| plano ||| 'plano' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| pomona ||| 'pomona' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| pontiac ||| 'pontiac' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| port arthur ||| 'port arthur' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| portland ||| 'portland' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| portsmouth ||| 'portsmouth' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| providence ||| 'providence' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| provo ||| 'provo' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| pueblo ||| 'pueblo' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| quincy ||| 'quincy' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| racine ||| 'racine' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| raleigh ||| 'raleigh' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| reading ||| 'reading' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| redford ||| 'redford' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| redondo beach ||| 'redondo beach' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| reno ||| 'reno' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| richardson ||| 'richardson' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| richmond ||| 'richmond' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| riverside ||| 'riverside' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| roanoke ||| 'roanoke' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| rochester ||| 'rochester' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| rockford ||| 'rockford' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| royal oak ||| 'royal oak' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| sacramento ||| 'sacramento' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| saginaw ||| 'saginaw' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| salem ||| 'salem' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| salinas ||| 'salinas' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| salt lake city ||| 'salt lake city' ||| 5 5 5 5 0 0 ||| 0-0 1-1 2-2
+[X] ||| san angelo ||| 'san angelo' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| san antonio ||| 'san antonio' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| san bernardino ||| 'san bernardino' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| san diego ||| 'san diego' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| san francisco ||| 'san francisco' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| san jose ||| 'san jose' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| san leandro ||| 'san leandro' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| san mateo ||| 'san mateo' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| santa ana ||| 'santa ana' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| santa barbara ||| 'santa barbara' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| santa clara ||| 'santa clara' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| santa monica ||| 'santa monica' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| santa rosa ||| 'santa rosa' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| savannah ||| 'savannah' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| schenectady ||| 'schenectady' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| scotts valley ||| 'scotts valley' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| scottsdale ||| 'scottsdale' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| scranton ||| 'scranton' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| seattle ||| 'seattle' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| shreveport ||| 'shreveport' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| silver spring ||| 'silver spring' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| simi valley ||| 'simi valley' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| sioux city ||| 'sioux city' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| sioux falls ||| 'sioux falls' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| skokie ||| 'skokie' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| somerville ||| 'somerville' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| south bend ||| 'south bend' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| south gate ||| 'south gate' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| southfield ||| 'southfield' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| spokane ||| 'spokane' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| springfield ||| 'springfield' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| st. clair shores ||| 'st. clair shores' ||| 5 5 5 5 0 0 ||| 0-0 1-1 2-2
+[X] ||| st. joseph ||| 'st. joseph' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| st. louis ||| 'st. louis' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| st. paul ||| 'st. paul' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| st. petersburg ||| 'st. petersburg' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| stamford ||| 'stamford' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| sterling heights ||| 'sterling heights' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| stockton ||| 'stockton' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| sunnyvale ||| 'sunnyvale' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| syracuse ||| 'syracuse' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| tacoma ||| 'tacoma' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| tallahassee ||| 'tallahassee' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| tampa ||| 'tampa' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| taylor ||| 'taylor' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| tempe ||| 'tempe' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| terre haute ||| 'terre haute' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| thousand oaks ||| 'thousand oaks' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| toledo ||| 'toledo' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| topeka ||| 'topeka' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| torrance ||| 'torrance' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| trenton ||| 'trenton' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| troy ||| 'troy' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| tucson ||| 'tucson' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| tulsa ||| 'tulsa' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| tuscaloosa ||| 'tuscaloosa' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| tyler ||| 'tyler' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| upper darby ||| 'upper darby' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| utica ||| 'utica' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| vallejo ||| 'vallejo' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| ventura ||| 'ventura' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| virginia beach ||| 'virginia beach' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| waco ||| 'waco' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| waltham ||| 'waltham' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| warren ||| 'warren' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| warwick ||| 'warwick' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| washington ||| 'washington' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| waterbury ||| 'waterbury' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| waterford ||| 'waterford' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| waterloo ||| 'waterloo' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| waukegan ||| 'waukegan' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| west allis ||| 'west allis' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| west covina ||| 'west covina' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| west hartford ||| 'west hartford' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| west palm beach ||| 'west palm beach' ||| 5 5 5 5 0 0 ||| 0-0 1-1 2-2
+[X] ||| west valley ||| 'west valley' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| westland ||| 'westland' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| westminster ||| 'westminster' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| whittier ||| 'whittier' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| wichita ||| 'wichita' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| wichita falls ||| 'wichita falls' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| wilmington ||| 'wilmington' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| winston-salem ||| 'winston-salem' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| woodbridge ||| 'woodbridge' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| worcester ||| 'worcester' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| wyoming ||| 'wyoming' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| yonkers ||| 'yonkers' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| youngstown ||| 'youngstown' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| usa ||| 'usa' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| alverstone ||| 'alverstone' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| antero ||| 'antero' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| arkansas river ||| 'arkansas river' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| atlantic ocean ||| 'atlantic ocean' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| backbone mountain ||| 'backbone mountain' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| bear ||| 'bear' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| beaver dam creek ||| 'beaver dam creek' ||| 5 5 5 5 0 0 ||| 0-0 1-1 2-2
+[X] ||| becharof ||| 'becharof' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| belford ||| 'belford' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| belle fourche river ||| 'belle fourche river' ||| 5 5 5 5 0 0 ||| 0-0 1-1 2-2
+[X] ||| bianca ||| 'bianca' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| big stone lake ||| 'big stone lake' ||| 5 5 5 5 0 0 ||| 0-0 1-1 2-2
+[X] ||| black mesa ||| 'black mesa' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| black mountain ||| 'black mountain' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| blackburn ||| 'blackburn' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| bona ||| 'bona' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| borah peak ||| 'borah peak' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| boundary peak ||| 'boundary peak' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| brasstown bald ||| 'brasstown bald' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| bross ||| 'bross' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| browne tower ||| 'browne tower' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| campbell hill ||| 'campbell hill' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| castle ||| 'castle' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| centerville ||| 'centerville' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| champlain ||| 'champlain' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| charles mound ||| 'charles mound' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| cheaha mountain ||| 'cheaha mountain' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| churchill ||| 'churchill' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| clingmans dome ||| 'clingmans dome' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| colorado river ||| 'colorado river' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| crestone ||| 'crestone' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| crestone needle ||| 'crestone needle' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| death valley ||| 'death valley' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| delaware river ||| 'delaware river' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| driskill mountain ||| 'driskill mountain' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| eagle mountain ||| 'eagle mountain' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| east buttress ||| 'east buttress' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| el diente ||| 'el diente' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| elbert ||| 'elbert' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| erie ||| 'erie' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| evans ||| 'evans' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| fairweather ||| 'fairweather' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| flathead ||| 'flathead' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| foraker ||| 'foraker' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| franklin township ||| 'franklin township' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| gannett peak ||| 'gannett peak' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| granite peak ||| 'granite peak' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| grays ||| 'grays' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| great salt lake ||| 'great salt lake' ||| 5 5 5 5 0 0 ||| 0-0 1-1 2-2
+[X] ||| guadalupe peak ||| 'guadalupe peak' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| gulf of mexico ||| 'gulf of mexico' ||| 5 5 5 5 0 0 ||| 0-0 1-1 2-2
+[X] ||| harney peak ||| 'harney peak' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| harvard ||| 'harvard' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| high point ||| 'high point' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| hubbard ||| 'hubbard' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| humphreys peak ||| 'humphreys peak' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| hunter ||| 'hunter' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| huron ||| 'huron' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| iliamna ||| 'iliamna' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| jerimoth hill ||| 'jerimoth hill' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| johnson township ||| 'johnson township' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| kennedy ||| 'kennedy' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| kings peak ||| 'kings peak' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| kit carson ||| 'kit carson' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| kootenai river ||| 'kootenai river' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| la plata ||| 'la plata' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| lake champlain ||| 'lake champlain' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| lake erie ||| 'lake erie' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| lake michigan ||| 'lake michigan' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| lake superior ||| 'lake superior' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| lincoln ||| 'lincoln' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| little river ||| 'little river' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| long island sound ||| 'long island sound' ||| 5 5 5 5 0 0 ||| 0-0 1-1 2-2
+[X] ||| longs ||| 'longs' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| magazine mountain ||| 'magazine mountain' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| maroon ||| 'maroon' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| massive ||| 'massive' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| mauna kea ||| 'mauna kea' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| mckinley ||| 'mckinley' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| michigan ||| 'michigan' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| mille lacs ||| 'mille lacs' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| mississippi river ||| 'mississippi river' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| mount curwood ||| 'mount curwood' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| mount davis ||| 'mount davis' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| mount elbert ||| 'mount elbert' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| mount frissell ||| 'mount frissell' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| mount greylock ||| 'mount greylock' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| mount hood ||| 'mount hood' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| mount katahdin ||| 'mount katahdin' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| mount mansfield ||| 'mount mansfield' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| mount marcy ||| 'mount marcy' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| mount mckinley ||| 'mount mckinley' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| mount mitchell ||| 'mount mitchell' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| mount rainier ||| 'mount rainier' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| mount rogers ||| 'mount rogers' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| mount sunflower ||| 'mount sunflower' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| mount washington ||| 'mount washington' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| mount whitney ||| 'mount whitney' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| naknek ||| 'naknek' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| new orleans ||| 'new orleans' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| north palisade ||| 'north palisade' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| ocheyedan mound ||| 'ocheyedan mound' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| ohio river ||| 'ohio river' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| okeechobee ||| 'okeechobee' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| ontario ||| 'ontario' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| ouachita river ||| 'ouachita river' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| pacific ocean ||| 'pacific ocean' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| pontchartrain ||| 'pontchartrain' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| potomac river ||| 'potomac river' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| princeton ||| 'princeton' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| quandary ||| 'quandary' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| rainier ||| 'rainier' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| rainy ||| 'rainy' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| red ||| 'red' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| red bluff reservoir ||| 'red bluff reservoir' ||| 5 5 5 5 0 0 ||| 0-0 1-1 2-2
+[X] ||| red river ||| 'red river' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| salton sea ||| 'salton sea' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| sanford ||| 'sanford' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| sassafras mountain ||| 'sassafras mountain' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| shasta ||| 'shasta' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| shavano ||| 'shavano' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| sill ||| 'sill' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| snake river ||| 'snake river' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| south buttress ||| 'south buttress' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| southeast corner ||| 'southeast corner' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| spruce knob ||| 'spruce knob' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| st. clair ||| 'st. clair' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| st. elias ||| 'st. elias' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| st. francis river ||| 'st. francis river' ||| 5 5 5 5 0 0 ||| 0-0 1-1 2-2
+[X] ||| superior ||| 'superior' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| tahoe ||| 'tahoe' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| taum sauk mountain ||| 'taum sauk mountain' ||| 5 5 5 5 0 0 ||| 0-0 1-1 2-2
+[X] ||| tenleytown ||| 'tenleytown' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| teshekpuk ||| 'teshekpuk' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| timms hill ||| 'timms hill' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| torreys ||| 'torreys' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| uncompahgre ||| 'uncompahgre' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| vancouver ||| 'vancouver' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| verdigris river ||| 'verdigris river' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| walton county ||| 'walton county' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| wheeler peak ||| 'wheeler peak' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| white ||| 'white' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| white butte ||| 'white butte' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| whitney ||| 'whitney' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| williamson ||| 'williamson' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| wilson ||| 'wilson' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| winnebago ||| 'winnebago' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| woodall mountain ||| 'woodall mountain' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| wrangell ||| 'wrangell' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| yale ||| 'yale' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| allegheny ||| 'allegheny' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| arkansas ||| 'arkansas' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| bighorn ||| 'bighorn' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| canadian ||| 'canadian' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| chattahoochee ||| 'chattahoochee' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| cheyenne ||| 'cheyenne' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| cimarron ||| 'cimarron' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| clark fork ||| 'clark fork' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| colorado ||| 'colorado' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| columbia ||| 'columbia' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| connecticut ||| 'connecticut' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| cumberland ||| 'cumberland' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| dakota ||| 'dakota' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| delaware ||| 'delaware' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| gila ||| 'gila' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| green ||| 'green' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| hudson ||| 'hudson' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| little missouri ||| 'little missouri' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| mississippi ||| 'mississippi' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| missouri ||| 'missouri' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| neosho ||| 'neosho' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| niobrara ||| 'niobrara' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| north platte ||| 'north platte' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| ohio ||| 'ohio' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| ouachita ||| 'ouachita' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| pearl ||| 'pearl' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| pecos ||| 'pecos' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| potomac ||| 'potomac' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| powder ||| 'powder' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| red ||| 'red' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| republican ||| 'republican' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| rio grande ||| 'rio grande' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| roanoke ||| 'roanoke' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| rock ||| 'rock' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| san juan ||| 'san juan' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| smoky hill ||| 'smoky hill' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| snake ||| 'snake' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| south platte ||| 'south platte' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| st. francis ||| 'st. francis' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| tennessee ||| 'tennessee' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| tombigbee ||| 'tombigbee' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| wabash ||| 'wabash' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| washita ||| 'washita' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| wateree catawba ||| 'wateree catawba' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| white ||| 'white' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| yellowstone ||| 'yellowstone' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| ak ||| 'ak' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| al ||| 'al' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| ar ||| 'ar' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| az ||| 'az' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| ca ||| 'ca' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| co ||| 'co' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| ct ||| 'ct' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| dc ||| 'dc' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| de ||| 'de' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| fl ||| 'fl' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| ga ||| 'ga' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| hi ||| 'hi' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| ia ||| 'ia' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| id ||| 'id' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| il ||| 'il' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| in ||| 'in' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| ks ||| 'ks' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| ky ||| 'ky' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| la ||| 'la' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| ma ||| 'ma' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| md ||| 'md' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| me ||| 'me' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| mi ||| 'mi' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| mn ||| 'mn' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| mo ||| 'mo' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| ms ||| 'ms' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| mt ||| 'mt' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| nc ||| 'nc' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| nd ||| 'nd' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| ne ||| 'ne' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| nh ||| 'nh' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| nj ||| 'nj' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| nm ||| 'nm' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| nv ||| 'nv' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| ny ||| 'ny' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| oh ||| 'oh' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| ok ||| 'ok' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| or ||| 'or' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| pa ||| 'pa' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| ri ||| 'ri' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| sc ||| 'sc' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| sd ||| 'sd' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| tn ||| 'tn' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| tx ||| 'tx' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| ut ||| 'ut' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| va ||| 'va' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| vt ||| 'vt' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| wa ||| 'wa' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| wi ||| 'wi' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| wv ||| 'wv' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| wy ||| 'wy' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| alabama ||| 'al' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| alaska ||| 'ak' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| arizona ||| 'az' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| arkansas ||| 'ar' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| california ||| 'ca' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| colorado ||| 'co' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| connecticut ||| 'ct' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| delaware ||| 'de' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| district of columbia ||| 'dc' ||| 5 5 5 5 0 0 ||| 0-0 1-1 2-2
+[X] ||| florida ||| 'fl' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| georgia ||| 'ga' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| hawaii ||| 'hi' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| idaho ||| 'id' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| illinois ||| 'il' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| indiana ||| 'in' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| iowa ||| 'ia' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| kansas ||| 'ks' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| kentucky ||| 'ky' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| louisiana ||| 'la' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| maine ||| 'me' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| maryland ||| 'md' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| massachusetts ||| 'ma' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| michigan ||| 'mi' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| minnesota ||| 'mn' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| mississippi ||| 'ms' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| missouri ||| 'mo' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| montana ||| 'mt' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| nebraska ||| 'ne' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| nevada ||| 'nv' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| new hampshire ||| 'nh' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| new jersey ||| 'nj' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| new mexico ||| 'nm' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| new york ||| 'ny' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| north carolina ||| 'nc' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| north dakota ||| 'nd' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| ohio ||| 'oh' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| oklahoma ||| 'ok' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| oregon ||| 'or' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| pennsylvania ||| 'pa' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| rhode island ||| 'ri' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| south carolina ||| 'sc' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| south dakota ||| 'sd' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| tennessee ||| 'tn' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| texas ||| 'tx' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| utah ||| 'ut' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| vermont ||| 'vt' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| virginia ||| 'va' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| washington ||| 'wa' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| west virginia ||| 'wv' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| wisconsin ||| 'wi' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| wyoming ||| 'wy' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| alabama ||| 'alabama' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| alaska ||| 'alaska' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| arizona ||| 'arizona' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| arkansas ||| 'arkansas' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| california ||| 'california' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| colorado ||| 'colorado' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| connecticut ||| 'connecticut' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| delaware ||| 'delaware' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| district of columbia ||| 'district of columbia' ||| 5 5 5 5 0 0 ||| 0-0 1-1 2-2
+[X] ||| florida ||| 'florida' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| georgia ||| 'georgia' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| hawaii ||| 'hawaii' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| idaho ||| 'idaho' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| illinois ||| 'illinois' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| indiana ||| 'indiana' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| iowa ||| 'iowa' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| kansas ||| 'kansas' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| kentucky ||| 'kentucky' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| louisiana ||| 'louisiana' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| maine ||| 'maine' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| maryland ||| 'maryland' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| massachusetts ||| 'massachusetts' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| michigan ||| 'michigan' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| minnesota ||| 'minnesota' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| mississippi ||| 'mississippi' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| missouri ||| 'missouri' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| montana ||| 'montana' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| nebraska ||| 'nebraska' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| nevada ||| 'nevada' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| new hampshire ||| 'new hampshire' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| new jersey ||| 'new jersey' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| new mexico ||| 'new mexico' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| new york ||| 'new york' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| north carolina ||| 'north carolina' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| north dakota ||| 'north dakota' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| ohio ||| 'ohio' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| oklahoma ||| 'oklahoma' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| oregon ||| 'oregon' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| pennsylvania ||| 'pennsylvania' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| rhode island ||| 'rhode island' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| south carolina ||| 'south carolina' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| south dakota ||| 'south dakota' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| tennessee ||| 'tennessee' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| texas ||| 'texas' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| utah ||| 'utah' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| vermont ||| 'vermont' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| virginia ||| 'virginia' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| washington ||| 'washington' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| west virginia ||| 'west virginia' ||| 5 5 5 5 0 0 ||| 0-0 1-1
+[X] ||| wisconsin ||| 'wisconsin' ||| 5 5 5 5 0 0 ||| 0-0
+[X] ||| wyoming ||| 'wyoming' ||| 5 5 5 5 0 0 ||| 0-0

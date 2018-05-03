@@ -1,0 +1,14 @@
+begin default-weight
+0.0
+end default-weight
+begin word-weights
+end word-weights
+begin word-class-weights
+Num 0.0
+CityName 0.0
+CountryName 0.0
+PlaceName 0.0
+RiverName 0.0
+StateAbbrev 0.0
+StateName 0.0
+end word-class-weights

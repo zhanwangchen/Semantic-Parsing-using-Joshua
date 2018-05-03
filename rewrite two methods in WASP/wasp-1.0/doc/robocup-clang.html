@@ -1,0 +1,215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+	<head>
+		<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+		<title>CLang: The RoboCup Coach Language</title>
+	</head>
+	<body>
+		<h1>CLang: The RoboCup Coach Language</h1>
+		
+		<p>
+			The RoboCup Coach Language (CLang) was developed to enable online coaches
+			to change the behavior of simulated soccer players during games in the
+			Simulated League.  Since a coach may work together with teams from
+			different research groups, it is important for the coach language to
+			have clear semantics that prevent misinterpretation from both the players
+			and the coach.
+		</p>
+
+		<p>
+			The CLang grammar that is used in our corpus is based on the one given in
+			the following document (Section 7.7):
+		</p>
+		
+		<blockquote>
+			<p>
+				Mao Chen, Klaus Dorer, Ehsan Foroughi, Fredrik Heintz, ZhanXiang Huang,
+				Spiros Kapetanakis, Kostas Kostiadis, Johan Kummeneje, Jan Murray,
+				Itsuki Noda, Oliver Obst, Pat Riley, Timo Steffens, Yi Wang and Xiang
+				Yin.  <i>RoboCup Soccer Server Users Manual, for Soccer Server Version
+				7.07 and later.</i>  February 11, 2003.
+			</p>
+		</blockquote>
+	
+		<p>
+			CLang was not designed for use with an NL interface.  To make it easier
+			to use, we have modified CLang, guided by the following principles:
+		</p>
+
+		<ol>
+			<li>
+				If a construct is too clumsy to describe using natural languages, then
+				a more common specialization of the construct is introduced.  For
+				example, <tt>(arc POINT 0 RADIUS 0 360)</tt> becomes <tt>(circle POINT
+				RADIUS)</tt>.
+			</li>
+			<li>
+				If there are simple concepts that can be easily described in natural
+				languages, but are impossible to express in CLang, then new constructs
+				that correspond to these concepts are introduced.  For example, 
+				<tt>(left REGION)</tt> is a new construct that refers to the left half
+				of <tt>REGION</tt> from our team's perspective.
+			</li>
+			<li>
+				New constructs may be introduced by symmetry.  For example, the
+				<tt>player</tt> predicate is introduced alongside
+				<tt>player-except</tt> and <tt>player-range</tt>, so that players can
+				be referenced in a unified manner.
+			</li>
+			<li>
+				It must be easy to convert the new constructs back into CLang for use
+				in the RoboCup Soccer Server.
+			</li>
+		</ol>
+
+		<p>
+			Here are the modifications that have been made:
+		</p>
+
+		<ol>
+			<li>
+				All references to players are made using the following constructs:
+				<ul>
+					<li>
+						<tt>(player TEAM UNUM_SET)</tt> - the players in the team
+						<tt>TEAM</tt> whose uniform number is in the set <tt>UNUM_SET</tt>.
+					</li>
+					<li>
+						<tt>(player-except TEAM UNUM_SET)</tt> - the players in the team
+						<tt>TEAM</tt> whose uniform number is <b>not</b> in the set
+						<tt>UNUM_SET</tt>.
+					</li>
+					<li>
+						<tt>(player-range TEAM UNUM<sub>1</sub> UNUM<sub>2</sub>)</tt> -
+						the players in the team <tt>TEAM</tt> whose uniform number is
+						between <tt>UNUM<sub>1</sub></tt> and <tt>UNUM<sub>2</sub></tt>
+						(inclusive).
+					</li>
+				</ul>
+				All constructs that contain references to individual players are made
+				to accept <tt>player</tt>, <tt>player-except</tt> and
+				<tt>player-range</tt> as arguments.  For example, <tt>(bowner our
+				{6})</tt> becomes <tt>(bowner (player our {6}))</tt>.  <tt>(pass
+				{2})</tt> becomes <tt>(pass (player our {2}))</tt>.
+			</li>
+			<li>
+				<tt>(ppos TEAM UNUM_SET INT<sub>1</sub> INT<sub>2</sub> REGION)</tt>
+				becomes:
+				<ul>
+					<li>
+						<tt>(ppos-any (player TEAM UNUM_SET) REGION)</tt> if
+						<tt>INT<sub>1</sub></tt> is 1 and <tt>INT<sub>2</sub></tt> is
+						greater than or equal to the size of <tt>UNUM_SET</tt>.  (This
+						corresponds to the <tt>ppos-all</tt> predicate that appeared in
+						earlier versions of the CLang corpus.  <tt>ppos-any</tt> is a more
+						appropriate name than <tt>ppos-all</tt>.)
+					</li>
+					<li>
+						<tt>(ppos-none TEAM REGION)</tt> if <tt>UNUM_SET</tt> is
+						<tt>{0}</tt> and both <tt>INT<sub>1</sub></tt> and
+						<tt>INT<sub>2</sub></tt> are zero.
+					</li>
+				</ul>
+			</li>
+			<li>
+				<tt>(POINT<sub>1</sub> + ((pt ball) * POINT<sub>2</sub>))</tt> becomes
+				<tt>(pt-with-ball-attraction POINT<sub>1</sub> POINT<sub>2</sub>)</tt>.
+			</li>
+			<li>
+				<tt>(arc POINT 0 RADIUS ANGLE_BEGIN 360)</tt> becomes <tt>(circle POINT
+				RADIUS)</tt>, regardless of the value of <tt>ANGLE_BEGIN</tt>.
+			</li>
+			<li>
+				New constructs are introduced for the following pre-defined regions:
+				<ul>
+					<li>
+						Rectangles:
+						<ul>
+							<li>
+								<tt>(field)</tt> - the entire field.
+							</li>
+							<li>
+								<tt>(half TEAM)</tt> - the <tt>TEAM</tt>'s half of the field.
+							</li>
+							<li>
+								<tt>(penalty-area TEAM)</tt> - the <tt>TEAM</tt>'s penalty
+								area.
+							</li>
+							<li>
+								<tt>(goal-area TEAM)</tt> - the <tt>TEAM</tt>'s goal area.
+							</li>
+							<li>
+								<tt>(midfield)</tt> - the entire midfield.
+							</li>
+							<li>
+								<tt>(midfield TEAM)</tt> - the <tt>TEAM</tt>'s half of the
+								midfield.
+							</li>
+							<li>
+								<tt>(near-goal-line TEAM)</tt> - the area near the
+								<tt>TEAM</tt>'s goal line.  (The <tt>very-near-goal-line</tt>
+								predicate, which appeared in previous versions of the CLang
+								corpus, becomes <tt>near-goal-line</tt>.  There was previously
+								only one instance of <tt>very-near-goal-line</tt> in the
+								corpus, and the two predicates are semantically very similar.)
+							</li>
+							<li>
+								<tt>(from-goal-line TEAM X<sub>1</sub> X<sub>2</sub>)</tt> -
+								<tt>X<sub>1</sub></tt> to <tt>X<sub>2</sub></tt> meters from
+								the <tt>TEAM</tt>'s goal line.
+							</li>
+							<li>
+								<tt>(left REGION)</tt> - the left half of <tt>REGION</tt> from
+								our team's perspective.
+							</li>
+							<li>
+								<tt>(right REGION)</tt> - the right half of <tt>REGION</tt>
+								from our team's perspective.
+							</li>
+							<li>
+								<tt>(left-quarter REGION)</tt> - the left quarter of
+								<tt>REGION</tt> from our team's perspective.
+							</li>
+							<li>
+								<tt>(right-quarter REGION)</tt> - the right quarter of
+								<tt>REGION</tt> from our team's perspective.
+							</li>
+							<li>
+								<tt>(reg-exclude REGION<sub>1</sub> REGION<sub>2</sub>)</tt> -
+								the region <tt>REGION<sub>1</sub></tt> <b>minus</b> 
+								<tt>REGION<sub>2</sub></tt>.  (This construct is used only when
+								it results in a rectangular region.)
+							</li>
+						</ul>
+					</li>
+					<li>
+						Points:
+						<ul>
+							<li>
+								<tt>(front-of-goal TEAM)</tt> - the point directly in front of
+								the <tt>TEAM</tt>'s goal.
+							</li>
+							<li>
+								<tt>(from-goal TEAM X)</tt> - the point <tt>X</tt> meters in
+								front of the <tt>TEAM</tt>'s goal.
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ol>
+
+		<p>
+			Code that translates the new CLang constructs into the original CLang
+			(and the pre-defined regions into exact <i>xy</i>-coordinates) is
+			available upon request.
+		</p>
+
+		<hr>
+
+		<p><i>
+			Yuk Wah Wong
+			(<a href="mailto:ywwong@cs.utexas.edu">ywwong@cs.utexas.edu</a>)
+		</i></p>
+	</body>
+</html>

@@ -1,0 +1,1344 @@
+<?xml version="1.0"?>
+<!DOCTYPE examples [
+  <!ELEMENT examples (example*)>
+  <!ELEMENT example (nl*,syn*,augsyn*,mrl*,mrl-parse?,parse*)>
+  <!ELEMENT nl (#PCDATA)>
+  <!ELEMENT syn (#PCDATA)>
+  <!ELEMENT augsyn (#PCDATA)>
+  <!ELEMENT mrl (#PCDATA)>
+  <!ELEMENT mrl-parse (node*)>
+  <!ELEMENT node (#PCDATA)>
+  <!ELEMENT parse (#PCDATA)>
+]>
+<examples>
+
+<example id="782">
+<nl lang="en">
+Where is the smallest city ?
+</nl>
+</example>
+
+<example id="783">
+<nl lang="en">
+Which capitals are in the states that border Texas ?
+</nl>
+</example>
+
+<example id="784">
+<nl lang="en">
+Which capitals are not major cities ?
+</nl>
+</example>
+
+<example id="785">
+<nl lang="en">
+Which city in California has the largest population ?
+</nl>
+</example>
+
+<example id="786">
+<nl lang="en">
+Which is the density of the state that the largest river in the United States runs through ?
+</nl>
+</example>
+
+<example id="787">
+<nl lang="en">
+Which is the highest peak not in Alaska ?
+</nl>
+</example>
+
+<example id="788">
+<nl lang="en">
+Which is the longest river in USA ?
+</nl>
+<parse rank="0" score="0.0">
+traverse_1( longest( river( loc_2( countryid( 'usa'
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_is_*n:X#2_USA_*t:Bound_})({_*n:X#1_*n:X#2_countryid(_'usa'_})
+  *r:*n:X_->_({_which_})({_traverse\_1(_})
+  *r:*n:X_->_({_the_longest_river_in_})({_longest(_river(_loc\_2(_})
+-->
+</example>
+
+<example id="789">
+<nl lang="en">
+Which is the lowest point of the states that the Mississippi runs through ?
+</nl>
+</example>
+
+<example id="790">
+<nl lang="en">
+Which is the shortest river ?
+</nl>
+<parse rank="0" score="0.0">
+traverse_1( riverid( shortest( river(
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_is_the_*n:X#2_*t:Bound_})({_*n:X#1_riverid(_*n:X#2_})
+  *r:*n:X_->_({_which_})({_traverse\_1(_})
+  *r:*n:X_->_({_shortest_river_})({_shortest(_river(_})
+-->
+</example>
+
+<example id="791">
+<nl lang="en">
+Which is the smallest state ?
+</nl>
+<parse rank="0" score="0.0">
+traverse_1( riverid( smallest( state(
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_is_the_*n:X#2_*t:Bound_})({_*n:X#1_riverid(_*n:X#2_})
+  *r:*n:X_->_({_which_})({_traverse\_1(_})
+  *r:*n:X_->_({_smallest_state_})({_smallest(_state(_})
+-->
+<parse rank="1" score="0.0">
+traverse_1( cityid( smallest( state(
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_is_*n:X#2_*t:Bound_})({_*n:X#1_cityid(_*n:X#2_})
+  *r:*n:X_->_({_which_})({_traverse\_1(_})
+  *r:*n:X_->_({_the_smallest_state_})({_smallest(_state(_})
+-->
+<parse rank="2" score="0.0">
+traverse_1( placeid( smallest( state(
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_is_*n:X#2_*t:Bound_})({_*n:X#1_placeid(_*n:X#2_})
+  *r:*n:X_->_({_which_})({_traverse\_1(_})
+  *r:*n:X_->_({_the_smallest_state_})({_smallest(_state(_})
+-->
+</example>
+
+<example id="792">
+<nl lang="en">
+Which of the states bordering Pennsylvania has the largest population ?
+</nl>
+</example>
+
+<example id="793">
+<nl lang="en">
+Which river goes through the most states ?
+</nl>
+</example>
+
+<example id="794">
+<nl lang="en">
+Which river runs through most states ?
+</nl>
+</example>
+
+<example id="795">
+<nl lang="en">
+Which river runs through the most states ?
+</nl>
+<nl lang="es">
+cual rio corre por mas estados ?
+</nl>
+<nl lang="ja">
+donna kawa ga mottomo ooku no kawa wo nagarete imasu ka ?
+</nl>
+<nl lang="tr">
+hangi nehir en cok eyaletten gecer ?
+</nl>
+<parse rank="0" score="0.0">
+traverse_2( state( river( traverse_1(
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_river_*n:X#2_*t:Bound_})({_*n:X#2_river(_*n:X#1_})
+  *r:*n:X_->_({_which_})({_traverse\_1(_})
+  *r:*n:X_->_({_runs_through_the_most_states_})({_traverse\_2(_state(_})
+-->
+<parse rank="1" score="0.0">
+traverse_1( river( traverse_2( state(
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_river_*n:X#2_*t:Bound_})({_*n:X#1_river(_*n:X#2_})
+  *r:*n:X_->_({_which_})({_traverse\_1(_})
+  *r:*n:X_->_({_runs_through_the_most_states_})({_traverse\_2(_state(_})
+-->
+</example>
+
+<example id="796">
+<nl lang="en">
+Which river traverses most states ?
+</nl>
+</example>
+
+<example id="797">
+<nl lang="en">
+Which rivers are in Alaska ?
+</nl>
+</example>
+
+<example id="798">
+<nl lang="en">
+Which rivers do not run through Texas ?
+</nl>
+</example>
+
+<example id="799">
+<nl lang="en">
+Which rivers do not run through USA ?
+</nl>
+</example>
+
+<example id="800">
+<nl lang="en">
+Which rivers flow through Alaska ?
+</nl>
+<nl lang="es">
+cuales rios corren por alaska ?
+</nl>
+<nl lang="ja">
+dono kawa wa arasuka wo nagarete imasu ka ?
+</nl>
+<nl lang="tr">
+hangi nehirler alaska nin icinden akar ?
+</nl>
+</example>
+
+<example id="801">
+<nl lang="en">
+Which rivers run through states bordering New Mexico ?
+</nl>
+<nl lang="es">
+cuales rios corren por estados bordeando a new mexico ?
+</nl>
+<nl lang="ja">
+donna kawa wa nyuu mekishiko ni rinsetsu suru shuu wo nagarete imasu ka ?
+</nl>
+<nl lang="tr">
+hangi nehirler new mexico ya siniri olan eyaletlerden gecer ?
+</nl>
+</example>
+
+<example id="802">
+<nl lang="en">
+Which rivers run through states that border the state with the capital Austin ?
+</nl>
+</example>
+
+<example id="803">
+<nl lang="en">
+Which rivers run through states with fewest cities ?
+</nl>
+</example>
+
+<example id="804">
+<nl lang="en">
+Which rivers run through the state with the largest city in the US ?
+</nl>
+</example>
+
+<example id="805">
+<nl lang="en">
+Which rivers run through the state with the lowest elevation in the USA ?
+</nl>
+</example>
+
+<example id="806">
+<nl lang="en">
+Which state border Kentucky ?
+</nl>
+<nl lang="es">
+cual estado bordean a kentucky ?
+</nl>
+<nl lang="ja">
+kentakkii ni rinsetsu suru shuu wa nan desu ka ?
+</nl>
+<nl lang="tr">
+hangi eyaletin kentucky ye siniri vardir ?
+</nl>
+</example>
+
+<example id="807">
+<nl lang="en">
+Which state borders Florida ?
+</nl>
+<nl lang="es">
+cual estado bordea a florida ?
+</nl>
+<nl lang="ja">
+furorida ni rinsetsu suru shuu wa dochira desu ka ?
+</nl>
+<nl lang="tr">
+hangi eyaletin florida ya siniri vardir ?
+</nl>
+</example>
+
+<example id="808">
+<nl lang="en">
+Which state borders Hawaii ?
+</nl>
+<nl lang="es">
+cual estado bordea a hawaii ?
+</nl>
+<nl lang="ja">
+hawai ni rinsetsu suru shuu wa dochira desu ka ?
+</nl>
+<nl lang="tr">
+hangi eyaletin hawaii ya siniri vardir ?
+</nl>
+</example>
+
+<example id="809">
+<nl lang="en">
+Which state borders most states ?
+</nl>
+<nl lang="es">
+cual estado bordea a los mas estados ?
+</nl>
+<nl lang="ja">
+donna shuu ga mottomo ooku no shuu ni rinsetsu shite imasu ka ?
+</nl>
+<nl lang="tr">
+hangi eyaletin en cok eyalete siniri vardir ?
+</nl>
+</example>
+
+<example id="810">
+<nl lang="en">
+Which state borders the most states ?
+</nl>
+<nl lang="es">
+cual estado bordea a mas estados ?
+</nl>
+<nl lang="ja">
+donna shuu ga mottomo ooku no shuu ni rinsetsu shite imasu ka ?
+</nl>
+<nl lang="tr">
+hangi eyaletin en cok eyalete siniri vardir ?
+</nl>
+</example>
+
+<example id="811">
+<nl lang="en">
+Which state capital has the smallest population ?
+</nl>
+</example>
+
+<example id="812">
+<nl lang="en">
+Which state contains most rivers ?
+</nl>
+</example>
+
+<example id="813">
+<nl lang="en">
+Which state has the biggest population ?
+</nl>
+</example>
+
+<example id="814">
+<nl lang="en">
+Which state has the greatest density ?
+</nl>
+</example>
+
+<example id="815">
+<nl lang="en">
+Which state has the greatest population ?
+</nl>
+<nl lang="es">
+cual estado tiene la poblacion mas grande ?
+</nl>
+<nl lang="ja">
+dono shuu wa mottomo ookii jinkou ga ariumasu ka ?
+</nl>
+<nl lang="tr">
+hangi eyalet en buyuk nufusa sahiptir ?
+</nl>
+</example>
+
+<example id="816">
+<nl lang="en">
+Which state has the highest elevation ?
+</nl>
+<nl lang="es">
+cual estado tiene la elevacion mas alta ?
+</nl>
+<nl lang="ja">
+dono shuu wa mottomo takai kaibatsu ga arimasu ka ?
+</nl>
+<nl lang="tr">
+hangi eyalet en yuksek yukseltiye sahiptir ?
+</nl>
+</example>
+
+<example id="817">
+<nl lang="en">
+Which state has the highest peak in the country ?
+</nl>
+<nl lang="es">
+cual estado tiene el pico mas alto en el pais ?
+</nl>
+<nl lang="ja">
+dono shuu wa kuni no mottomo takai choujou ga arimasu ka ?
+</nl>
+<nl lang="tr">
+hangi eyalet ulkedeki en yuksek zirveye sahiptir ?
+</nl>
+</example>
+
+<example id="818">
+<nl lang="en">
+Which state has the highest point ?
+</nl>
+<nl lang="es">
+cual estado tiene el punto mas alto ?
+</nl>
+<nl lang="ja">
+dono shuu wa mottomo takai chiten ga arimasu ka ?
+</nl>
+<nl lang="tr">
+hangi eyalet en yuksek noktaya sahiptir ?
+</nl>
+</example>
+
+<example id="819">
+<nl lang="en">
+Which state has the highest population density ?
+</nl>
+<nl lang="es">
+cual estado tiene la densidad de poblacion mas alta ?
+</nl>
+<nl lang="ja">
+dono shuu wa mottomo ookii jinkou no mitsudo ga arimasu ka ?
+</nl>
+<nl lang="tr">
+hangi eyalet en yuksek nufus yogunluguna sahiptir ?
+</nl>
+<parse rank="0" score="0.0">
+state( loc_1( traverse_1( largest_one( density_1(
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_state_*n:X#2_*t:Bound_})({_state(_loc\_1(_*n:X#1_*n:X#2_})
+  *r:*n:X_->_({_which_})({_traverse\_1(_})
+  *r:*n:X_->_({_has_the_highest_population_density_})({_largest\_one(_density\_1(_})
+-->
+<parse rank="1" score="0.0">
+state( largest_one( density_1( traverse_1(
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_state_*n:X#2_*t:Bound_})({_state(_*n:X#2_*n:X#1_})
+  *r:*n:X_->_({_which_})({_traverse\_1(_})
+  *r:*n:X_->_({_has_the_highest_population_density_})({_largest\_one(_density\_1(_})
+-->
+<parse rank="2" score="0.0">
+state( traverse_1( largest_one( density_1(
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_state_*n:X#2_*t:Bound_})({_state(_*n:X#1_*n:X#2_})
+  *r:*n:X_->_({_which_})({_traverse\_1(_})
+  *r:*n:X_->_({_has_the_highest_population_density_})({_largest\_one(_density\_1(_})
+-->
+<parse rank="3" score="0.0">
+traverse_1( state( largest_one( density_1(
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_state_*n:X#2_*t:Bound_})({_*n:X#1_state(_*n:X#2_})
+  *r:*n:X_->_({_which_})({_traverse\_1(_})
+  *r:*n:X_->_({_has_the_highest_population_density_})({_largest\_one(_density\_1(_})
+-->
+<parse rank="4" score="0.0">
+traverse_1( largest_one( density_1( state(
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_state_*n:X#2_*t:Bound_})({_*n:X#1_*n:X#2_state(_})
+  *r:*n:X_->_({_which_})({_traverse\_1(_})
+  *r:*n:X_->_({_has_the_highest_population_density_})({_largest\_one(_density\_1(_})
+-->
+</example>
+
+<example id="820">
+<nl lang="en">
+Which state has the largest city ?
+</nl>
+<nl lang="es">
+cual estado tiene la ciudad mas grande ?
+</nl>
+<nl lang="ja">
+dono shuu wa mottomo ookii toshi ga arimasu ka ?
+</nl>
+<nl lang="tr">
+hangi eyalet en buyuk sehre sahiptir ?
+</nl>
+</example>
+
+<example id="821">
+<nl lang="en">
+Which state has the largest density ?
+</nl>
+</example>
+
+<example id="822">
+<nl lang="en">
+Which state has the least population density ?
+</nl>
+</example>
+
+<example id="823">
+<nl lang="en">
+Which state has the longest river ?
+</nl>
+<nl lang="es">
+cual estado tiene el rio mas largo ?
+</nl>
+<nl lang="ja">
+dono shuu wa mottomo nagai kawa ga arimasu ka ?
+</nl>
+<nl lang="tr">
+hangi eyalet en uzun nehre sahiptir ?
+</nl>
+</example>
+
+<example id="824">
+<nl lang="en">
+Which state has the lowest elevation ?
+</nl>
+</example>
+
+<example id="825">
+<nl lang="en">
+Which state has the lowest point that borders Idaho ?
+</nl>
+</example>
+
+<example id="826">
+<nl lang="en">
+Which state has the lowest population density ?
+</nl>
+</example>
+
+<example id="827">
+<nl lang="en">
+Which state has the most major cities ?
+</nl>
+</example>
+
+<example id="828">
+<nl lang="en">
+Which state has the most major rivers ?
+</nl>
+</example>
+
+<example id="829">
+<nl lang="en">
+Which state has the most major rivers running through it ?
+</nl>
+</example>
+
+<example id="830">
+<nl lang="en">
+Which state has the most people ?
+</nl>
+</example>
+
+<example id="831">
+<nl lang="en">
+Which state has the most population ?
+</nl>
+</example>
+
+<example id="832">
+<nl lang="en">
+Which state has the most rivers ?
+</nl>
+</example>
+
+<example id="833">
+<nl lang="en">
+Which state has the most rivers running through it ?
+</nl>
+</example>
+
+<example id="834">
+<nl lang="en">
+Which state has the Red river ?
+</nl>
+</example>
+
+<example id="835">
+<nl lang="en">
+Which state has the smallest area that borders Texas ?
+</nl>
+</example>
+
+<example id="836">
+<nl lang="en">
+Which state has the smallest average urban population ?
+</nl>
+</example>
+
+<example id="837">
+<nl lang="en">
+Which state has the smallest population density ?
+</nl>
+<nl lang="es">
+cual estado tiene la densidad de poblacion mas pequena ?
+</nl>
+<nl lang="ja">
+mottomo chiisai jinkou no mitsudo ga aru shuu wa nan desu ka ?
+</nl>
+<nl lang="tr">
+hangi eyalet en kucuk nufus yogunluguna sahiptir ?
+</nl>
+</example>
+
+<example id="838">
+<nl lang="en">
+Which state has the sparsest population density ?
+</nl>
+</example>
+
+<example id="839">
+<nl lang="en">
+Which state is Kalamazoo in ?
+</nl>
+<nl lang="es">
+en que estado esta kalamazoo ?
+</nl>
+<nl lang="ja">
+dono shuu ni wa karamazuu kawa desu ka ?
+</nl>
+<nl lang="tr">
+kalamazoo hangi eyalettedir ?
+</nl>
+</example>
+
+<example id="840">
+<nl lang="en">
+Which state is Mount McKinley in ?
+</nl>
+</example>
+
+<example id="841">
+<nl lang="en">
+Which state is the city Denver located in ?
+</nl>
+<nl lang="es">
+en cual estado se encuentra la ciudad denver ?
+</nl>
+<nl lang="ja">
+dono shuu ni wa denbaru toshi ga arimasu ka ?
+</nl>
+<nl lang="tr">
+denver sehri hangi eyalettedir ?
+</nl>
+</example>
+
+<example id="842">
+<nl lang="en">
+Which state is the largest city in Montana in ?
+</nl>
+</example>
+
+<example id="843">
+<nl lang="en">
+Which state is the smallest ?
+</nl>
+<nl lang="es">
+cual estado es el mas pequeno ?
+</nl>
+<nl lang="ja">
+mottomo chiisai shuu wa nan desu ka ?
+</nl>
+<nl lang="tr">
+hangi eyalet en kucuktur ?
+</nl>
+<parse rank="0" score="0.0">
+state( traverse_1( cityid( loc_2( smallest(
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_state_is_*n:X#2_*t:Bound_})({_state(_*n:X#1_cityid(_*n:X#2_})
+  *r:*n:X_->_({_which_})({_traverse\_1(_})
+  *r:*n:X_->_({_the_smallest_})({_loc\_2(_smallest(_})
+-->
+</example>
+
+<example id="844">
+<nl lang="en">
+Which states adjoin Alabama ?
+</nl>
+</example>
+
+<example id="845">
+<nl lang="en">
+Which states border Alabama ?
+</nl>
+<parse rank="0" score="0.0">
+traverse_1( state( next_to_2( 'alabama'
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_states_border_*n:X#2_*t:Bound_})({_*n:X#1_state(_next\_to\_2(_*n:X#2_})
+  *r:*n:X_->_({_which_})({_traverse\_1(_})
+  *r:*n:X_->_({_Alabama_})({_'alabama'_})
+-->
+</example>
+
+<example id="846">
+<nl lang="en">
+Which states border Alaska ?
+</nl>
+<parse rank="0" score="0.0">
+traverse_1( state( next_to_2( 'alaska'
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_states_border_*n:X#2_*t:Bound_})({_*n:X#1_state(_next\_to\_2(_*n:X#2_})
+  *r:*n:X_->_({_which_})({_traverse\_1(_})
+  *r:*n:X_->_({_Alaska_})({_'alaska'_})
+-->
+</example>
+
+<example id="847">
+<nl lang="en">
+Which states border Arizona ?
+</nl>
+<nl lang="es">
+cuales estados bordean a arizona ?
+</nl>
+<nl lang="ja">
+arizona ni rinsetsu suru shuu wa nan desu ka ?
+</nl>
+<nl lang="tr">
+arizona a siniri olan eyaletler nelerdir ?
+</nl>
+<parse rank="0" score="0.0">
+traverse_1( state( next_to_2( 'arizona'
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_states_border_*n:X#2_*t:Bound_})({_*n:X#1_state(_next\_to\_2(_*n:X#2_})
+  *r:*n:X_->_({_which_})({_traverse\_1(_})
+  *r:*n:X_->_({_Arizona_})({_'arizona'_})
+-->
+</example>
+
+<example id="848">
+<nl lang="en">
+Which states border Colorado ?
+</nl>
+<nl lang="es">
+cuales estados bordean a colorado ?
+</nl>
+<nl lang="ja">
+kororado ni rinsetsu suru shuu wa nan desu ka ?
+</nl>
+<nl lang="tr">
+colorado a siniri olan eyaletler nelerdir ?
+</nl>
+<parse rank="0" score="0.0">
+traverse_1( state( next_to_2( 'colorado'
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_states_border_*n:X#2_*t:Bound_})({_*n:X#1_state(_next\_to\_2(_*n:X#2_})
+  *r:*n:X_->_({_which_})({_traverse\_1(_})
+  *r:*n:X_->_({_Colorado_})({_'colorado'_})
+-->
+<parse rank="1" score="0.0">
+traverse_1( intersection( state( next_to_2( stateid( 'colorado'
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_states_*n:X#2_*t:Bound_})({_*n:X#1_intersection(_state(_*n:X#2_})
+  *r:*n:X_->_({_which_})({_traverse\_1(_})
+  *r:*n:X_->_({_border_Colorado_})({_next\_to\_2(_stateid(_'colorado'_})
+-->
+<parse rank="2" score="0.0">
+traverse_1( state( intersection( next_to_2( stateid( 'colorado'
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_states_*n:X#2_*t:Bound_})({_*n:X#1_state(_intersection(_*n:X#2_})
+  *r:*n:X_->_({_which_})({_traverse\_1(_})
+  *r:*n:X_->_({_border_Colorado_})({_next\_to\_2(_stateid(_'colorado'_})
+-->
+<parse rank="3" score="0.0">
+traverse_1( state( next_to_2( stateid( 'colorado'
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_states_*n:X#2_*t:Bound_})({_*n:X#1_state(_*n:X#2_})
+  *r:*n:X_->_({_which_})({_traverse\_1(_})
+  *r:*n:X_->_({_border_Colorado_})({_next\_to\_2(_stateid(_'colorado'_})
+-->
+<parse rank="4" score="0.0">
+traverse_1( next_to_2( state( next_to_2( stateid( 'colorado'
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_states_*n:X#2_*t:Bound_})({_*n:X#1_next\_to\_2(_state(_*n:X#2_})
+  *r:*n:X_->_({_which_})({_traverse\_1(_})
+  *r:*n:X_->_({_border_Colorado_})({_next\_to\_2(_stateid(_'colorado'_})
+-->
+<parse rank="5" score="0.0">
+traverse_1( next_to_2( stateid( 'colorado' state(
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_states_*n:X#2_*t:Bound_})({_*n:X#1_*n:X#2_state(_})
+  *r:*n:X_->_({_which_})({_traverse\_1(_})
+  *r:*n:X_->_({_border_Colorado_})({_next\_to\_2(_stateid(_'colorado'_})
+-->
+</example>
+
+<example id="849">
+<nl lang="en">
+Which states border Hawaii ?
+</nl>
+<parse rank="0" score="0.0">
+traverse_1( state( next_to_2( 'hawaii'
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_states_border_*n:X#2_*t:Bound_})({_*n:X#1_state(_next\_to\_2(_*n:X#2_})
+  *r:*n:X_->_({_which_})({_traverse\_1(_})
+  *r:*n:X_->_({_Hawaii_})({_'hawaii'_})
+-->
+</example>
+
+<example id="850">
+<nl lang="en">
+Which states border Illinois ?
+</nl>
+<parse rank="0" score="0.0">
+traverse_1( state( next_to_2( 'illinois'
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_states_border_*n:X#2_*t:Bound_})({_*n:X#1_state(_next\_to\_2(_*n:X#2_})
+  *r:*n:X_->_({_which_})({_traverse\_1(_})
+  *r:*n:X_->_({_Illinois_})({_'illinois'_})
+-->
+</example>
+
+<example id="851">
+<nl lang="en">
+Which states border Iowa ?
+</nl>
+<parse rank="0" score="0.0">
+traverse_1( state( next_to_2( 'iowa'
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_states_border_*n:X#2_*t:Bound_})({_*n:X#1_state(_next\_to\_2(_*n:X#2_})
+  *r:*n:X_->_({_which_})({_traverse\_1(_})
+  *r:*n:X_->_({_Iowa_})({_'iowa'_})
+-->
+</example>
+
+<example id="852">
+<nl lang="en">
+Which states border Kentucky ?
+</nl>
+<nl lang="es">
+cuales estados bordean a kentucky ?
+</nl>
+<nl lang="ja">
+kentakkii ni rinsetsu suru shuu wa nan desu ka ?
+</nl>
+<nl lang="tr">
+kentucky a siniri olan eyaletler nelerdir ?
+</nl>
+</example>
+
+<example id="853">
+<nl lang="en">
+Which states border Michigan ?
+</nl>
+<parse rank="0" score="0.0">
+traverse_1( state( next_to_2( 'michigan'
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_states_border_*n:X#2_*t:Bound_})({_*n:X#1_state(_next\_to\_2(_*n:X#2_})
+  *r:*n:X_->_({_which_})({_traverse\_1(_})
+  *r:*n:X_->_({_Michigan_})({_'michigan'_})
+-->
+</example>
+
+<example id="854">
+<nl lang="en">
+Which states border New York ?
+</nl>
+<nl lang="es">
+cuales estados bordean a new york ?
+</nl>
+<nl lang="ja">
+nyuu yooku ni rinsetsu suru shuu wa nan desu ka ?
+</nl>
+<nl lang="tr">
+new york a siniri olan eyaletler nelerdir ?
+</nl>
+<parse rank="0" score="0.0">
+traverse_1( state( next_to_2( 'new york'
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_states_border_*n:X#2_*t:Bound_})({_*n:X#1_state(_next\_to\_2(_*n:X#2_})
+  *r:*n:X_->_({_which_})({_traverse\_1(_})
+  *r:*n:X_->_({_New_York_})({_'new_york'_})
+-->
+</example>
+
+<example id="855">
+<nl lang="en">
+Which states border no other states ?
+</nl>
+</example>
+
+<example id="856">
+<nl lang="en">
+Which states border South Dakota ?
+</nl>
+<nl lang="es">
+cuales estados bordean a south dakota ?
+</nl>
+<nl lang="ja">
+sausu dakota ni rinsetsu suru shuu wa nan desu ka ?
+</nl>
+<nl lang="tr">
+south dakota a siniri olan eyaletler nelerdir ?
+</nl>
+<parse rank="0" score="0.0">
+traverse_1( state( next_to_2( 'sd'
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_states_border_*n:X#2_*t:Bound_})({_*n:X#1_state(_next\_to\_2(_*n:X#2_})
+  *r:*n:X_->_({_which_})({_traverse\_1(_})
+  *r:*n:X_->_({_South_Dakota_})({_'sd'_})
+-->
+</example>
+
+<example id="857">
+<nl lang="en">
+Which states border states through which the Mississippi traverses ?
+</nl>
+</example>
+
+<example id="858">
+<nl lang="en">
+Which states border Texas ?
+</nl>
+<nl lang="es">
+cuales estados bordean a texas ?
+</nl>
+<nl lang="ja">
+tekisasu ni rinsetsu suru shuu wa nan desu ka ?
+</nl>
+<nl lang="tr">
+hangi eyaletin texas ye siniri vardir ?
+</nl>
+<parse rank="0" score="0.0">
+traverse_1( state( next_to_2( 'tx'
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_states_border_*n:X#2_*t:Bound_})({_*n:X#1_state(_next\_to\_2(_*n:X#2_})
+  *r:*n:X_->_({_which_})({_traverse\_1(_})
+  *r:*n:X_->_({_Texas_})({_'tx'_})
+-->
+</example>
+
+<example id="859">
+<nl lang="en">
+Which states border the longest river in the USA ?
+</nl>
+<parse rank="0" score="0.0">
+traverse_1( state( next_to_2( longest( river( loc_2( countryid( 'usa'
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_states_border_*n:X#2_*t:Bound_})({_*n:X#1_state(_next\_to\_2(_*n:X#2_})
+  *r:*n:X_->_({_which_})({_traverse\_1(_})
+  *r:*n:X_->_({_the_longest_river_in_the_USA_})({_longest(_river(_loc\_2(_countryid(_'usa'_})
+-->
+</example>
+
+<example id="860">
+<nl lang="en">
+Which states border the Missouri river ?
+</nl>
+</example>
+
+<example id="861">
+<nl lang="en">
+Which states border the state with the smallest area ?
+</nl>
+<parse rank="0" score="0.0">
+traverse_1( state( next_to_2( smallest_one( area_1( state(
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_states_border_the_*n:X#2_*t:Bound_})({_*n:X#1_state(_next\_to\_2(_*n:X#2_})
+  *r:*n:X_->_({_which_})({_traverse\_1(_})
+  *r:*n:X_->_({_state_with_the_smallest_area_})({_smallest\_one(_area\_1(_state(_})
+-->
+</example>
+
+<example id="862">
+<nl lang="en">
+Which state 's capital city is the largest ?
+</nl>
+<nl lang="es">
+cual estado tiene la ciudad capital mas grande ?
+</nl>
+<nl lang="ja">
+dono shuu no shuto wa mottomo ookii desu ka ?
+</nl>
+<nl lang="tr">
+hangi eyaletin baskenti en buyuktur ?
+</nl>
+</example>
+
+<example id="863">
+<nl lang="en">
+Which states do Colorado river flow through ?
+</nl>
+</example>
+
+<example id="864">
+<nl lang="en">
+Which states does not border Texas ?
+</nl>
+</example>
+
+<example id="865">
+<nl lang="en">
+Which states does the Chattahoochee river run through ?
+</nl>
+</example>
+
+<example id="866">
+<nl lang="en">
+Which states does the Colorado river run through ?
+</nl>
+</example>
+
+<example id="867">
+<nl lang="en">
+Which states does the longest river cross ?
+</nl>
+<parse rank="0" score="0.0">
+state( traverse_1( longest( river( traverse_2(
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_cross_*t:Bound_})({_*n:X#1_traverse\_2(_})
+  *r:*n:X_->_({_which_states_does_the_longest_river_})({_state(_traverse\_1(_longest(_river(_})
+-->
+<parse rank="1" score="0.0">
+state( traverse_1( longest( river( traverse_2(
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_the_longest_river_*n:X#2_*t:Bound_})({_*n:X#1_longest(_river(_*n:X#2_})
+  *r:*n:X_->_({_which_states_does_})({_state(_traverse\_1(_})
+  *r:*n:X_->_({_cross_})({_traverse\_2(_})
+-->
+<parse rank="2" score="0.0">
+traverse_2( river( state( traverse_1( longest(
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_river_*n:X#2_*t:Bound_})({_*n:X#2_river(_*n:X#1_})
+  *r:*n:X_->_({_which_states_does_the_longest_})({_state(_traverse\_1(_longest(_})
+  *r:*n:X_->_({_cross_})({_traverse\_2(_})
+-->
+<parse rank="3" score="0.0">
+state( traverse_1( longest( river( traverse_2(
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_river_*n:X#2_*t:Bound_})({_*n:X#1_river(_*n:X#2_})
+  *r:*n:X_->_({_which_states_does_the_longest_})({_state(_traverse\_1(_longest(_})
+  *r:*n:X_->_({_cross_})({_traverse\_2(_})
+-->
+</example>
+
+<example id="868">
+<nl lang="en">
+Which states does the longest river run through ?
+</nl>
+<parse rank="0" score="0.0">
+state( traverse_1( longest( river( traverse_2(
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_run_through_*t:Bound_})({_*n:X#1_traverse\_2(_})
+  *r:*n:X_->_({_which_states_does_the_longest_river_})({_state(_traverse\_1(_longest(_river(_})
+-->
+<parse rank="1" score="0.0">
+state( traverse_1( longest( river( traverse_2(
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_the_longest_river_*n:X#2_*t:Bound_})({_*n:X#1_longest(_river(_*n:X#2_})
+  *r:*n:X_->_({_which_states_does_})({_state(_traverse\_1(_})
+  *r:*n:X_->_({_run_through_})({_traverse\_2(_})
+-->
+<parse rank="2" score="0.0">
+traverse_2( river( state( traverse_1( longest(
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_river_*n:X#2_*t:Bound_})({_*n:X#2_river(_*n:X#1_})
+  *r:*n:X_->_({_which_states_does_the_longest_})({_state(_traverse\_1(_longest(_})
+  *r:*n:X_->_({_run_through_})({_traverse\_2(_})
+-->
+<parse rank="3" score="0.0">
+state( traverse_1( longest( river( traverse_2(
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_river_*n:X#2_*t:Bound_})({_*n:X#1_river(_*n:X#2_})
+  *r:*n:X_->_({_which_states_does_the_longest_})({_state(_traverse\_1(_longest(_})
+  *r:*n:X_->_({_run_through_})({_traverse\_2(_})
+-->
+</example>
+
+<example id="869">
+<nl lang="en">
+Which states does the Mississippi river run through ?
+</nl>
+<nl lang="es">
+por cuales estados corre el rio mississippi ?
+</nl>
+<nl lang="ja">
+mishishippi kawa wa donna shuu wo nagarete imasu ka ?
+</nl>
+<nl lang="tr">
+mississippi nehri hangi eyaletlerden gecmektedir ?
+</nl>
+</example>
+
+<example id="870">
+<nl lang="en">
+Which states does the Mississippi run through ?
+</nl>
+<nl lang="es">
+por cuales estados corre el mississippi ?
+</nl>
+<nl lang="ja">
+mishishippi kawa wa dono shuu wo nagarete imasu ka ?
+</nl>
+<nl lang="tr">
+mississippi hangi eyaletlerden gecer ?
+</nl>
+<parse rank="0" score="0.0">
+traverse_1( state( traverse_1( riverid( 'mississippi'
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_states_does_*n:X#2_through_*t:Bound_})({_*n:X#1_state(_traverse\_1(_*n:X#2_})
+  *r:*n:X_->_({_which_})({_traverse\_1(_})
+  *r:*n:X_->_({_the_Mississippi_run_})({_riverid(_'mississippi'_})
+-->
+<parse rank="1" score="0.0">
+traverse_1( intersection( state( traverse_1( riverid( 'mississippi'
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_states_*n:X#2_*t:Bound_})({_*n:X#1_intersection(_state(_*n:X#2_})
+  *r:*n:X_->_({_which_})({_traverse\_1(_})
+  *r:*n:X_->_({_does_the_Mississippi_run_through_})({_traverse\_1(_riverid(_'mississippi'_})
+-->
+<parse rank="2" score="0.0">
+traverse_1( state( intersection( traverse_1( riverid( 'mississippi'
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_states_*n:X#2_*t:Bound_})({_*n:X#1_state(_intersection(_*n:X#2_})
+  *r:*n:X_->_({_which_})({_traverse\_1(_})
+  *r:*n:X_->_({_does_the_Mississippi_run_through_})({_traverse\_1(_riverid(_'mississippi'_})
+-->
+<parse rank="3" score="0.0">
+traverse_1( state( traverse_1( riverid( 'mississippi'
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_states_*n:X#2_*t:Bound_})({_*n:X#1_state(_*n:X#2_})
+  *r:*n:X_->_({_which_})({_traverse\_1(_})
+  *r:*n:X_->_({_does_the_Mississippi_run_through_})({_traverse\_1(_riverid(_'mississippi'_})
+-->
+<parse rank="4" score="0.0">
+traverse_1( next_to_2( state( traverse_1( riverid( 'mississippi'
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_states_*n:X#2_*t:Bound_})({_*n:X#1_next\_to\_2(_state(_*n:X#2_})
+  *r:*n:X_->_({_which_})({_traverse\_1(_})
+  *r:*n:X_->_({_does_the_Mississippi_run_through_})({_traverse\_1(_riverid(_'mississippi'_})
+-->
+<parse rank="5" score="0.0">
+traverse_1( traverse_1( riverid( 'mississippi' state(
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_states_*n:X#2_*t:Bound_})({_*n:X#1_*n:X#2_state(_})
+  *r:*n:X_->_({_which_})({_traverse\_1(_})
+  *r:*n:X_->_({_does_the_Mississippi_run_through_})({_traverse\_1(_riverid(_'mississippi'_})
+-->
+</example>
+
+<example id="871">
+<nl lang="en">
+Which states does the Missouri river pass through ?
+</nl>
+</example>
+
+<example id="872">
+<nl lang="en">
+Which states does the Missouri river run through ?
+</nl>
+<nl lang="es">
+por cuales estados corre el rio missouri ?
+</nl>
+<nl lang="ja">
+mizuuri kawa wa donna shuu wo nagarete imasu ka ?
+</nl>
+<nl lang="tr">
+missouri nehri hangi eyaletlerden gecer ?
+</nl>
+</example>
+
+<example id="873">
+<nl lang="en">
+Which states have a major city named Austin ?
+</nl>
+</example>
+
+<example id="874">
+<nl lang="en">
+Which states have a river ?
+</nl>
+<parse rank="0" score="0.0">
+traverse_1( intersection( state( loc_1( river(
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_states_*n:X#2_river_*t:Bound_})({_*n:X#1_intersection(_state(_*n:X#2_river(_})
+  *r:*n:X_->_({_which_})({_traverse\_1(_})
+  *r:*n:X_->_({_have_a_})({_loc\_1(_})
+-->
+<parse rank="1" score="0.0">
+traverse_1( state( loc_1( river(
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_states_*n:X#2_river_*t:Bound_})({_*n:X#1_state(_*n:X#2_river(_})
+  *r:*n:X_->_({_which_})({_traverse\_1(_})
+  *r:*n:X_->_({_have_a_})({_loc\_1(_})
+-->
+<parse rank="2" score="0.0">
+traverse_1( state( loc_1( river(
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_states_have_a_*n:X#2_*t:Bound_})({_*n:X#1_state(_loc\_1(_*n:X#2_})
+  *r:*n:X_->_({_which_})({_traverse\_1(_})
+  *r:*n:X_->_({_river_})({_river(_})
+-->
+</example>
+
+<example id="875">
+<nl lang="en">
+Which states have cities named Austin ?
+</nl>
+<nl lang="es">
+cuales estados tienen ciudades con el nombre austin ?
+</nl>
+<nl lang="ja">
+ausuchin to iu toshi ga aru shuu dono desu ka ?
+</nl>
+<nl lang="tr">
+hangi eyaletlerde austin sehri vardir ?
+</nl>
+<parse rank="0" score="0.0">
+traverse_1( state( loc_1( city( cityid( 'austin',
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_states_*n:X#2_named_Austin_*t:Bound_})({_*n:X#1_state(_*n:X#2_cityid(_'austin',_})
+  *r:*n:X_->_({_which_})({_traverse\_1(_})
+  *r:*n:X_->_({_have_cities_})({_loc\_1(_city(_})
+-->
+<parse rank="1" score="0.0">
+traverse_1( state( loc_1( intersection( city( cityid( 'austin',
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_states_have_*n:X#2_Austin_*t:Bound_})({_*n:X#1_state(_loc\_1(_*n:X#2_'austin',_})
+  *r:*n:X_->_({_which_})({_traverse\_1(_})
+  *r:*n:X_->_({_cities_named_})({_intersection(_city(_cityid(_})
+-->
+<parse rank="2" score="0.0">
+traverse_1( state( loc_1( city( cityid( 'austin',
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_states_*n:X#2_Austin_*t:Bound_})({_*n:X#1_state(_*n:X#2_'austin',_})
+  *r:*n:X_->_({_which_})({_traverse\_1(_})
+  *r:*n:X_->_({_have_cities_named_})({_loc\_1(_city(_cityid(_})
+-->
+<parse rank="3" score="0.0">
+traverse_1( state( loc_1( city( cityid( 'austin',
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_states_have_cities_*n:X#2_*t:Bound_})({_*n:X#1_state(_loc\_1(_city(_*n:X#2_})
+  *r:*n:X_->_({_which_})({_traverse\_1(_})
+  *r:*n:X_->_({_named_Austin_})({_cityid(_'austin',_})
+-->
+<parse rank="4" score="0.0">
+traverse_1( state( loc_1( intersection( city( cityid( 'austin',
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_states_have_*n:X#2_*t:Bound_})({_*n:X#1_state(_loc\_1(_*n:X#2_})
+  *r:*n:X_->_({_which_})({_traverse\_1(_})
+  *r:*n:X_->_({_cities_named_Austin_})({_intersection(_city(_cityid(_'austin',_})
+-->
+<parse rank="5" score="0.0">
+traverse_1( intersection( state( loc_1( city( cityid( 'austin',
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_states_*n:X#2_*t:Bound_})({_*n:X#1_intersection(_state(_*n:X#2_})
+  *r:*n:X_->_({_which_})({_traverse\_1(_})
+  *r:*n:X_->_({_have_cities_named_Austin_})({_loc\_1(_city(_cityid(_'austin',_})
+-->
+<parse rank="6" score="0.0">
+traverse_1( state( intersection( loc_1( city( cityid( 'austin',
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_states_*n:X#2_*t:Bound_})({_*n:X#1_state(_intersection(_*n:X#2_})
+  *r:*n:X_->_({_which_})({_traverse\_1(_})
+  *r:*n:X_->_({_have_cities_named_Austin_})({_loc\_1(_city(_cityid(_'austin',_})
+-->
+<parse rank="7" score="0.0">
+traverse_1( state( loc_1( city( cityid( 'austin',
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_states_*n:X#2_*t:Bound_})({_*n:X#1_state(_*n:X#2_})
+  *r:*n:X_->_({_which_})({_traverse\_1(_})
+  *r:*n:X_->_({_have_cities_named_Austin_})({_loc\_1(_city(_cityid(_'austin',_})
+-->
+<parse rank="8" score="0.0">
+traverse_1( next_to_2( state( loc_1( city( cityid( 'austin',
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_states_*n:X#2_*t:Bound_})({_*n:X#1_next\_to\_2(_state(_*n:X#2_})
+  *r:*n:X_->_({_which_})({_traverse\_1(_})
+  *r:*n:X_->_({_have_cities_named_Austin_})({_loc\_1(_city(_cityid(_'austin',_})
+-->
+<parse rank="9" score="0.0">
+traverse_1( loc_1( city( cityid( 'austin', state(
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_states_*n:X#2_*t:Bound_})({_*n:X#1_*n:X#2_state(_})
+  *r:*n:X_->_({_which_})({_traverse\_1(_})
+  *r:*n:X_->_({_have_cities_named_Austin_})({_loc\_1(_city(_cityid(_'austin',_})
+-->
+</example>
+
+<example id="876">
+<nl lang="en">
+Which states have points higher than the highest point in Colorado ?
+</nl>
+<nl lang="es">
+cuales estados tienen puntos mas alto que el punto mas alto en colorado ?
+</nl>
+<nl lang="ja">
+kororado no mottomo takai chiten yori motto takai chiten ga aru shuu wa nan desu ka ?
+</nl>
+<nl lang="tr">
+hangi eyaletler colorado nun en yuksek noktasindan daha yuksek noktaya sahiptirler ?
+</nl>
+</example>
+
+<example id="877">
+<nl lang="en">
+Which states have points that are higher than the highest point in Texas ?
+</nl>
+</example>
+
+<example id="878">
+<nl lang="en">
+Which states lie on the largest river in the United States ?
+</nl>
+</example>
+
+<example id="879">
+<nl lang="en">
+Which US city has the highest population density ?
+</nl>
+</example>
+
+</examples>

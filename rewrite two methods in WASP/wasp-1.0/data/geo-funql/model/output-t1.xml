@@ -1,0 +1,230 @@
+<?xml version="1.0"?>
+<!DOCTYPE examples [
+  <!ELEMENT examples (example*)>
+  <!ELEMENT example (nl*,syn*,augsyn*,mrl*,mrl-parse?,parse*)>
+  <!ELEMENT nl (#PCDATA)>
+  <!ELEMENT syn (#PCDATA)>
+  <!ELEMENT augsyn (#PCDATA)>
+  <!ELEMENT mrl (#PCDATA)>
+  <!ELEMENT mrl-parse (node*)>
+  <!ELEMENT node (#PCDATA)>
+  <!ELEMENT parse (#PCDATA)>
+]>
+<examples>
+
+<example id="42">
+<nl lang="en">
+How long is the Mississippi river ?
+</nl>
+<nl lang="es">
+que tiene de largo el rio mississippi ?
+</nl>
+<nl lang="ja">
+mishishippi kawa no nagasa wa dore gurai desu ka ?
+</nl>
+<nl lang="tr">
+mississippi nehrinin uzunlugu ne kadardir ?
+</nl>
+<parse rank="0" score="0.0">
+river answer len 'mississippi'
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_the_Mississippi_river_*t:Bound_})({_river_*n:X#1_'mississippi'_})
+  *r:*n:X_->_({_How_long_is_})({_answer_len_})
+-->
+<parse rank="1" score="0.0">
+answer len river riverid 'mississippi'
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_the_Mississippi_river_*t:Bound_})({_*n:X#1_river_riverid_'mississippi'_})
+  *r:*n:X_->_({_How_long_is_})({_answer_len_})
+-->
+<parse rank="2" score="0.0">
+answer len river riverid 'mississippi'
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_Mississippi_river_*t:Bound_})({_*n:X#1_river_riverid_'mississippi'_})
+  *r:*n:X_->_({_How_long_is_the_})({_answer_len_})
+-->
+<parse rank="3" score="0.0">
+river answer len 'mississippi'
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_the_*n:X#2_river_*t:Bound_})({_river_*n:X#1_*n:X#2_})
+  *r:*n:X_->_({_How_long_is_})({_answer_len_})
+  *r:*n:X_->_({_Mississippi_})({_'mississippi'_})
+-->
+<parse rank="4" score="0.0">
+answer len river riverid 'mississippi'
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_the_*n:X#2_river_*t:Bound_})({_*n:X#1_river_riverid_*n:X#2_})
+  *r:*n:X_->_({_How_long_is_})({_answer_len_})
+  *r:*n:X_->_({_Mississippi_})({_'mississippi'_})
+-->
+<parse rank="5" score="0.0">
+answer len 'mississippi' river
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_the_*n:X#2_river_*t:Bound_})({_*n:X#1_*n:X#2_river_})
+  *r:*n:X_->_({_How_long_is_})({_answer_len_})
+  *r:*n:X_->_({_Mississippi_})({_'mississippi'_})
+-->
+<parse rank="6" score="0.0">
+river riverid answer len riverid 'mississippi'
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_river_*t:Bound_})({_river_riverid_*n:X#1_})
+  *r:*n:X_->_({_How_long_is_the_Mississippi_})({_answer_len_riverid_'mississippi'_})
+-->
+<parse rank="7" score="0.0">
+river answer len riverid 'mississippi'
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_river_*t:Bound_})({_river_*n:X#1_})
+  *r:*n:X_->_({_How_long_is_the_Mississippi_})({_answer_len_riverid_'mississippi'_})
+-->
+<parse rank="8" score="0.0">
+answer len riverid 'mississippi',river
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_river_*t:Bound_})({_*n:X#1_,_river_})
+  *r:*n:X_->_({_How_long_is_the_Mississippi_})({_answer_len_riverid_'mississippi'_})
+-->
+<parse rank="9" score="0.0">
+answer len riverid 'mississippi' exclude river
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_river_*t:Bound_})({_*n:X#1_exclude_river_})
+  *r:*n:X_->_({_How_long_is_the_Mississippi_})({_answer_len_riverid_'mississippi'_})
+-->
+<parse rank="10" score="0.0">
+answer len riverid 'mississippi' river
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_river_*t:Bound_})({_*n:X#1_river_})
+  *r:*n:X_->_({_How_long_is_the_Mississippi_})({_answer_len_riverid_'mississippi'_})
+-->
+<parse rank="11" score="0.0">
+answer answer len river 'mississippi'
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_the_Mississippi_*n:X#2_*t:Bound_})({_answer_*n:X#1_*n:X#2_'mississippi'_})
+  *r:*n:X_->_({_How_long_is_})({_answer_len_})
+  *r:*n:X_->_({_river_})({_river_})
+-->
+<parse rank="12" score="0.0">
+river answer len 'mississippi'
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_the_Mississippi_*n:X#2_*t:Bound_})({_*n:X#2_*n:X#1_'mississippi'_})
+  *r:*n:X_->_({_How_long_is_})({_answer_len_})
+  *r:*n:X_->_({_river_})({_river_})
+-->
+<parse rank="13" score="0.0">
+answer len river 'mississippi'
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_the_Mississippi_*n:X#2_*t:Bound_})({_*n:X#1_*n:X#2_'mississippi'_})
+  *r:*n:X_->_({_How_long_is_})({_answer_len_})
+  *r:*n:X_->_({_river_})({_river_})
+-->
+<parse rank="14" score="0.0">
+answer len river riverid 'mississippi'
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_the_Mississippi_*n:X#2_*t:Bound_})({_*n:X#1_*n:X#2_riverid_'mississippi'_})
+  *r:*n:X_->_({_How_long_is_})({_answer_len_})
+  *r:*n:X_->_({_river_})({_river_})
+-->
+<parse rank="15" score="0.0">
+answer len river 'mississippi'
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_Mississippi_*n:X#2_*t:Bound_})({_*n:X#1_*n:X#2_'mississippi'_})
+  *r:*n:X_->_({_How_long_is_the_})({_answer_len_})
+  *r:*n:X_->_({_river_})({_river_})
+-->
+<parse rank="16" score="0.0">
+answer len river riverid 'mississippi'
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_Mississippi_*n:X#2_*t:Bound_})({_*n:X#1_*n:X#2_riverid_'mississippi'_})
+  *r:*n:X_->_({_How_long_is_the_})({_answer_len_})
+  *r:*n:X_->_({_river_})({_river_})
+-->
+<parse rank="17" score="0.0">
+answer len riverid river riverid 'mississippi'
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_How_long_is_the_*n:X#1_*t:Bound_})({_answer_len_riverid_*n:X#1_})
+  *r:*n:X_->_({_Mississippi_river_})({_river_riverid_'mississippi'_})
+-->
+<parse rank="18" score="0.0">
+answer len river riverid 'mississippi'
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_How_long_is_the_*n:X#1_*t:Bound_})({_answer_len_*n:X#1_})
+  *r:*n:X_->_({_Mississippi_river_})({_river_riverid_'mississippi'_})
+-->
+<parse rank="19" score="0.0">
+answer len riverid river riverid 'mississippi'
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_How_*n:X#1_is_the_*n:X#2_*t:Bound_})({_answer_*n:X#1_riverid_*n:X#2_})
+  *r:*n:X_->_({_long_})({_len_})
+  *r:*n:X_->_({_Mississippi_river_})({_river_riverid_'mississippi'_})
+-->
+<parse rank="20" score="0.0">
+answer len river riverid 'mississippi'
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_How_*n:X#1_is_the_*n:X#2_*t:Bound_})({_answer_*n:X#1_*n:X#2_})
+  *r:*n:X_->_({_long_})({_len_})
+  *r:*n:X_->_({_Mississippi_river_})({_river_riverid_'mississippi'_})
+-->
+<parse rank="21" score="0.0">
+answer len river riverid 'mississippi' loc_2
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_How_*n:X#1_is_the_*n:X#2_*t:Bound_})({_answer_*n:X#1_*n:X#2_loc\_2_})
+  *r:*n:X_->_({_long_})({_len_})
+  *r:*n:X_->_({_Mississippi_river_})({_river_riverid_'mississippi'_})
+-->
+<parse rank="22" score="0.0">
+answer answer len river riverid 'mississippi'
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_the_*n:X#2_*t:Bound_})({_answer_*n:X#1_*n:X#2_})
+  *r:*n:X_->_({_How_long_is_})({_answer_len_})
+  *r:*n:X_->_({_Mississippi_river_})({_river_riverid_'mississippi'_})
+-->
+<parse rank="23" score="0.0">
+all answer len river riverid 'mississippi'
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_the_*n:X#2_*t:Bound_})({_all_*n:X#1_*n:X#2_})
+  *r:*n:X_->_({_How_long_is_})({_answer_len_})
+  *r:*n:X_->_({_Mississippi_river_})({_river_riverid_'mississippi'_})
+-->
+<parse rank="24" score="0.0">
+answer len river riverid 'mississippi' loc_2
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:X#1_the_*n:X#2_*t:Bound_})({_*n:X#1_*n:X#2_loc\_2_})
+  *r:*n:X_->_({_How_long_is_})({_answer_len_})
+  *r:*n:X_->_({_Mississippi_river_})({_river_riverid_'mississippi'_})
+-->
+<parse rank="25" score="0.0">
+answer(len(river(riverid('mississippi'))))
+</parse>
+<!--
+*r:*n:Query_->_({_*t:Bound_*n:Num#1_*t:Bound_})({_answer_(_*n:Num#1_)_})
+  *r:*n:Num_->_({_How_long_is_*n:River#1_})({_len_(_*n:River#1_)_})
+    *r:*n:River_->_({_the_*n:River#1_river_})({_river_(_*n:River#1_)_})
+      *r:*n:River_->_({_*n:RiverName#1_})({_riverid_(_*n:RiverName#1_)_})
+        *r:*n:RiverName_->_({_mississippi_})({_'_mississippi_'_})
+-->
+</example>
+
+</examples>
